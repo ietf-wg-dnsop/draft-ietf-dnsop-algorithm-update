@@ -57,13 +57,13 @@
       </address>
     </author>
     <author fullname="Paul Wouters" initials="P." surname="Wouters">
-      <organization>Red Hat</organization>
+      <organization>Aiven</organization>
       <address>
 	<postal>
 	  <street/>
 	  <country>CA</country>
 	</postal>
-        <email>pwouters@redhat.com</email>
+        <email>paul.wouters@aiven.io</email>
       </address>
     </author>
     <author fullname="Ondrej Sury" initials="O." surname="Sury">
