@@ -6,19 +6,27 @@
 <meta content="initial-scale=1.0" name="viewport">
 <title>Algorithm Implementation Requirements and Usage Guidance for DNSSEC</title>
 <meta content="Wes Hardaker" name="author">
+<meta content="Warren Kumari" name="author">
 <meta content="Paul Wouters" name="author">
 <meta content="Ondrej Sury" name="author">
 <meta content="
        
+  [EDITOR NOTE: This document does not change the status (MUST, MAY,
+  RECOMMENDED, etc) of any of the algorithsm listed in RFC8624; that is the
+  work of future documents. Instead, this document simply moves the canonical
+  list of algorithms from RFC8624 to an IANA registry. This is done for two
+  reasons: 1) to allow the list to be updated more easily, and, much more
+  importantly, 2) to allow the list to be more easily referenced.]
+
  The DNSSEC protocol makes use of various cryptographic
  algorithms in order to provide authentication of DNS data and
  proof of non-existence.  To ensure interoperability between
  DNS resolvers and DNS authoritative servers, it is necessary
  to specify a set of algorithm implementation requirements and
  usage guidelines to ensure that there is at least one algorithm
- that all implementations support.  This document defines the
- current algorithm implementation requirements and usage
- guidance for DNSSEC. This document obsoletes RFC8624.
+ that all implementations support. This document updates RFC8624 by moving
+  the canonical source of algorithm implementation requirements and usage
+  guidance for DNSSEC from RFC8624 to an IANA registry.
        
     " name="description">
 <meta content="xml2rfc 3.9.1" name="generator">
@@ -26,21 +34,21 @@
 <meta content="draft-hardaker-dnsop-rfc8624-bis-00" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.9.1
-    Python 3.10.5
+    Python 3.11.5
     appdirs 1.4.4
-    ConfigArgParse 1.4.1
-    google-i18n-address 2.4.0
+    ConfigArgParse 1.7
+    google-i18n-address 2.5.2
     html5lib 1.1
     intervaltree 3.1.0
-    Jinja2 3.0.1
+    Jinja2 3.0.3
     kitchen 1.2.6
-    lxml 4.6.5
-    pycairo 1.20.1
-    pycountry 20.7.3
+    lxml 4.9.2
+    pycairo 1.23.0
+    pycountry 22.3.5
     pyflakes 2.5.0
     PyYAML 6.0
-    requests 2.27.1
-    setuptools 57.4.0
+    requests 2.28.2
+    setuptools 65.5.1
     six 1.16.0
 -->
 <link href="draft-hardaker-dnsop-rfc8624-bis.xml" rel="alternate" type="application/rfc+xml">
@@ -1192,11 +1200,11 @@ li > p:last-of-type {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">DNSSEC Cryptographic Algorithms</td>
-<td class="right">August 2022</td>
+<td class="right">November 2023</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Hardaker, et al.</td>
-<td class="center">Expires 16 February 2023</td>
+<td class="center">Expires 9 May 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1212,12 +1220,12 @@ li > p:last-of-type {
 <a href="https://www.rfc-editor.org/rfc/rfc8624" class="eref">8624</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-08-15" class="published">15 August 2022</time>
+<time datetime="2023-11-06" class="published">6 November 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-02-16">16 February 2023</time></dd>
+<dd class="expires"><time datetime="2024-05-09">9 May 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1225,8 +1233,12 @@ li > p:last-of-type {
 <div class="org">USC/ISI</div>
 </div>
 <div class="author">
+      <div class="author-name">W. Kumari</div>
+<div class="org">Google</div>
+</div>
+<div class="author">
       <div class="author-name">P. Wouters</div>
-<div class="org">Red Hat</div>
+<div class="org">Aiven</div>
 </div>
 <div class="author">
       <div class="author-name">O. Sury</div>
@@ -1239,15 +1251,22 @@ li > p:last-of-type {
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">
+  [EDITOR NOTE: This document does not change the status (MUST, MAY,
+  RECOMMENDED, etc) of any of the algorithsm listed in RFC8624; that is the
+  work of future documents. Instead, this document simply moves the canonical
+  list of algorithms from RFC8624 to an IANA registry. This is done for two
+  reasons: 1) to allow the list to be updated more easily, and, much more
+  importantly, 2) to allow the list to be more easily referenced.]
+
  The DNSSEC protocol makes use of various cryptographic
  algorithms in order to provide authentication of DNS data and
  proof of non-existence.  To ensure interoperability between
  DNS resolvers and DNS authoritative servers, it is necessary
  to specify a set of algorithm implementation requirements and
  usage guidelines to ensure that there is at least one algorithm
- that all implementations support.  This document defines the
- current algorithm implementation requirements and usage
- guidance for DNSSEC. This document obsoletes RFC8624.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+ that all implementations support. This document updates RFC8624 by moving
+  the canonical source of algorithm implementation requirements and usage
+  guidance for DNSSEC from RFC8624 to an IANA registry.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1268,7 +1287,7 @@ li > p:last-of-type {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 16 February 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 9 May 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1277,7 +1296,7 @@ li > p:last-of-type {
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2022 IETF Trust and the persons identified as the
+            Copyright (c) 2023 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1296,77 +1315,80 @@ li > p:last-of-type {
         <a href="#" onclick="scroll(0,0)" class="toplink">▲</a><h2 id="name-table-of-contents">
 <a href="#name-table-of-contents" class="section-name selfRef">Table of Contents</a>
         </h2>
-<nav class="toc"><ul class="ulEmpty compact toc ulBare">
-<li class="ulEmpty compact toc ulBare" id="section-toc.1-1.1">
-            <p id="section-toc.1-1.1.1"><a href="#section-1" class="xref">1</a>.  <a href="#name-introduction" class="xref">Introduction</a></p>
-<ul class="compact ulBare ulEmpty toc">
-<li class="compact ulBare ulEmpty toc" id="section-toc.1-1.1.2.1">
-                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="xref">1.1</a>.  <a href="#name-updating-algorithm-implemen" class="xref">Updating Algorithm Implementation Requirements and Usage Guidance</a></p>
+<nav class="toc"><ul class="ulBare ulEmpty toc compact">
+<li class="ulBare ulEmpty toc compact" id="section-toc.1-1.1">
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="xref">1</a>.  <a href="#name-introduction" class="xref">Introduction</a></p>
 </li>
-              <li class="compact ulBare ulEmpty toc" id="section-toc.1-1.1.2.2">
-                <p id="section-toc.1-1.1.2.2.1" class="keepWithNext"><a href="#section-1.2" class="xref">1.2</a>.  <a href="#name-updating-algorithm-requirem" class="xref">Updating Algorithm Requirement Levels</a></p>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.2">
+            <p id="section-toc.1-1.2.1"><a href="#section-2" class="xref">2</a>.  <a href="#name-terminology" class="xref">Terminology</a></p>
+<ul class="ulEmpty toc compact ulBare">
+<li class="ulEmpty toc compact ulBare" id="section-toc.1-1.2.2.1">
+                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="xref">2.1</a>.  <a href="#name-updating-algorithm-implemen" class="xref">Updating Algorithm Implementation Requirements and Usage Guidance</a></p>
 </li>
-              <li class="compact ulBare ulEmpty toc" id="section-toc.1-1.1.2.3">
-                <p id="section-toc.1-1.1.2.3.1" class="keepWithNext"><a href="#section-1.3" class="xref">1.3</a>.  <a href="#name-document-audience" class="xref">Document Audience</a></p>
+              <li class="ulEmpty toc compact ulBare" id="section-toc.1-1.2.2.2">
+                <p id="section-toc.1-1.2.2.2.1" class="keepWithNext"><a href="#section-2.2" class="xref">2.2</a>.  <a href="#name-updating-algorithm-requirem" class="xref">Updating Algorithm Requirement Levels</a></p>
 </li>
-            </ul>
-</li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1"><a href="#section-2" class="xref">2</a>.  <a href="#name-conventions-used-in-this-do" class="xref">Conventions Used in This Document</a></p>
-</li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1"><a href="#section-3" class="xref">3</a>.  <a href="#name-algorithm-selection" class="xref">Algorithm Selection</a></p>
-<ul class="compact ulBare ulEmpty toc">
-<li class="compact ulBare ulEmpty toc" id="section-toc.1-1.3.2.1">
-                <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="xref">3.1</a>.  <a href="#name-dnskey-algorithms" class="xref">DNSKEY Algorithms</a></p>
-</li>
-              <li class="compact ulBare ulEmpty toc" id="section-toc.1-1.3.2.2">
-                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="xref">3.2</a>.  <a href="#name-dnskey-algorithm-recommenda" class="xref">DNSKEY Algorithm Recommendation</a></p>
-</li>
-              <li class="compact ulBare ulEmpty toc" id="section-toc.1-1.3.2.3">
-                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="xref">3.3</a>.  <a href="#name-ds-and-cds-algorithms" class="xref">DS and CDS Algorithms</a></p>
-</li>
-              <li class="compact ulBare ulEmpty toc" id="section-toc.1-1.3.2.4">
-                <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="xref">3.4</a>.  <a href="#name-ds-and-cds-algorithm-recomm" class="xref">DS and CDS Algorithm Recommendation</a></p>
+              <li class="ulEmpty toc compact ulBare" id="section-toc.1-1.2.2.3">
+                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="xref">2.3</a>.  <a href="#name-document-audience" class="xref">Document Audience</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a></p>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.3">
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="xref">3</a>.  <a href="#name-conventions-used-in-this-do" class="xref">Conventions Used in This Document</a></p>
 </li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-operational-considerations" class="xref">Operational Considerations</a></p>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-algorithm-selection" class="xref">Algorithm Selection</a></p>
+<ul class="ulEmpty toc compact ulBare">
+<li class="ulEmpty toc compact ulBare" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="xref">4.1</a>.  <a href="#name-dnskey-algorithms" class="xref">DNSKEY Algorithms</a></p>
 </li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="xref">6</a>.  <a href="#name-implementation-report" class="xref">Implementation Report</a></p>
-<ul class="compact ulBare ulEmpty toc">
-<li class="compact ulBare ulEmpty toc" id="section-toc.1-1.6.2.1">
-                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="xref">6.1</a>.  <a href="#name-dnskey-algorithms-2" class="xref">DNSKEY Algorithms</a></p>
+              <li class="ulEmpty toc compact ulBare" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="xref">4.2</a>.  <a href="#name-dnskey-algorithm-recommenda" class="xref">DNSKEY Algorithm Recommendation</a></p>
 </li>
-            </ul>
+              <li class="ulEmpty toc compact ulBare" id="section-toc.1-1.4.2.3">
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="xref">4.3</a>.  <a href="#name-ds-and-cds-algorithms" class="xref">DS and CDS Algorithms</a></p>
 </li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#section-7" class="xref">7</a>.  <a href="#name-iana-considerations" class="xref">IANA Considerations</a></p>
-</li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#section-8" class="xref">8</a>.  <a href="#name-acknowledgements" class="xref">Acknowledgements</a></p>
-</li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#section-9" class="xref">9</a>.  <a href="#name-references" class="xref">References</a></p>
-<ul class="compact ulBare ulEmpty toc">
-<li class="compact ulBare ulEmpty toc" id="section-toc.1-1.9.2.1">
-                <p id="section-toc.1-1.9.2.1.1"><a href="#section-9.1" class="xref">9.1</a>.  <a href="#name-normative-references" class="xref">Normative References</a></p>
-</li>
-              <li class="compact ulBare ulEmpty toc" id="section-toc.1-1.9.2.2">
-                <p id="section-toc.1-1.9.2.2.1"><a href="#section-9.2" class="xref">9.2</a>.  <a href="#name-informative-references" class="xref">Informative References</a></p>
+              <li class="ulEmpty toc compact ulBare" id="section-toc.1-1.4.2.4">
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="xref">4.4</a>.  <a href="#name-ds-and-cds-algorithm-recomm" class="xref">DS and CDS Algorithm Recommendation</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="xref">Appendix A</a>.  <a href="#name-changes-since-rfc8624" class="xref">Changes since RFC8624</a></p>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a></p>
 </li>
-          <li class="ulEmpty compact toc ulBare" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="xref"></a><a href="#name-authors-addresses" class="xref">Authors' Addresses</a></p>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.6">
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="xref">6</a>.  <a href="#name-operational-considerations" class="xref">Operational Considerations</a></p>
+</li>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.7">
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="xref">7</a>.  <a href="#name-implementation-report" class="xref">Implementation Report</a></p>
+<ul class="ulEmpty toc compact ulBare">
+<li class="ulEmpty toc compact ulBare" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="xref">7.1</a>.  <a href="#name-dnskey-algorithms-2" class="xref">DNSKEY Algorithms</a></p>
+</li>
+            </ul>
+</li>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="xref">8</a>.  <a href="#name-iana-considerations" class="xref">IANA Considerations</a></p>
+</li>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="xref">9</a>.  <a href="#name-acknowledgements" class="xref">Acknowledgements</a></p>
+</li>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="xref">10</a>. <a href="#name-references" class="xref">References</a></p>
+<ul class="ulEmpty toc compact ulBare">
+<li class="ulEmpty toc compact ulBare" id="section-toc.1-1.10.2.1">
+                <p id="section-toc.1-1.10.2.1.1"><a href="#section-10.1" class="xref">10.1</a>.  <a href="#name-normative-references" class="xref">Normative References</a></p>
+</li>
+              <li class="ulEmpty toc compact ulBare" id="section-toc.1-1.10.2.2">
+                <p id="section-toc.1-1.10.2.2.1"><a href="#section-10.2" class="xref">10.2</a>.  <a href="#name-informative-references" class="xref">Informative References</a></p>
+</li>
+            </ul>
+</li>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.11">
+            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="xref">Appendix A</a>.  <a href="#name-changes-since-rfc8624" class="xref">Changes since RFC8624</a></p>
+</li>
+          <li class="ulBare ulEmpty toc compact" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="xref"></a><a href="#name-authors-addresses" class="xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1378,31 +1400,41 @@ li > p:last-of-type {
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <p id="section-1-1">
- The DNSSEC signing algorithms are defined by various RFCs,
- including <span>[<a href="#RFC4034" class="xref">RFC4034</a>]</span>, <span>[<a href="#RFC5155" class="xref">RFC5155</a>]</span>,
+  DNS Security Extensions (DNSSEC) <span>[<a href="#RFC9364" class="xref">RFC9364</a>]</span> is used to provide
+  authentication of DNS data. The DNSSEC signing algorithms are defined by
+  various RFCs, including <span>[<a href="#RFC4034" class="xref">RFC4034</a>]</span>, <span>[<a href="#RFC5155" class="xref">RFC5155</a>]</span>,
  <span>[<a href="#RFC5702" class="xref">RFC5702</a>]</span>, <span>[<a href="#RFC5933" class="xref">RFC5933</a>]</span>, <span>[<a href="#RFC6605" class="xref">RFC6605</a>]</span>, <span>[<a href="#RFC8080" class="xref">RFC8080</a>]</span>.
-        DNSSEC is used to provide authentication of data. To ensure
- interoperability, a set of "mandatory-to-implement" DNSKEY
- algorithms are defined.  This document obsoletes
- <span>[<a href="#RFC8624" class="xref">RFC8624</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<section id="section-1.1">
-        <h3 id="name-updating-algorithm-implemen">
-<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-updating-algorithm-implemen" class="section-name selfRef">Updating Algorithm Implementation Requirements and Usage Guidance</a>
-        </h3>
-<p id="section-1.1-1">
-   The field of cryptography evolves continuously.  New stronger
-   algorithms appear and existing algorithms are found to be
-   less secure then originally thought.  Therefore, algorithm
-   implementation requirements and usage guidance need to be
-   updated from time to time to reflect the new reality.  The
-   choices for algorithms must be conservative to minimize the
-   risk of algorithm compromise.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
+  To ensure interoperability, a set of "mandatory-to-implement" DNSKEY
+ algorithms are defined in <span>[<a href="#RFC8624" class="xref">RFC8624</a>]</span>. In order to make the
+  current status of the algorithms more easily accessible and understandable,
+  this document moves the canonical status of the algorithms from RFC8624 to
+  the IANA DNSSEC algorithm registries.
+  [ Editor: This is similar to the process used for the TLS ciphersuites -
+  https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4 ]<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
-<section id="section-1.2">
-        <h3 id="name-updating-algorithm-requirem">
-<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-updating-algorithm-requirem" class="section-name selfRef">Updating Algorithm Requirement Levels</a>
+</div>
+<section id="section-2">
+      <h2 id="name-terminology">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
+      </h2>
+<section id="section-2.1">
+        <h3 id="name-updating-algorithm-implemen">
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-updating-algorithm-implemen" class="section-name selfRef">Updating Algorithm Implementation Requirements and Usage Guidance</a>
         </h3>
-<p id="section-1.2-1">
+<p id="section-2.1-1">
+ The field of cryptography evolves continuously.  New stronger
+ algorithms appear and existing algorithms are found to be
+ less secure then originally thought.  Therefore, algorithm
+ implementation requirements and usage guidance need to be
+ updated from time to time to reflect the new reality.  The
+ choices for algorithms must be conservative to minimize the
+ risk of algorithm compromise.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+</section>
+<section id="section-2.2">
+        <h3 id="name-updating-algorithm-requirem">
+<a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-updating-algorithm-requirem" class="section-name selfRef">Updating Algorithm Requirement Levels</a>
+        </h3>
+<p id="section-2.2-1">
    The mandatory-to-implement algorithm of tomorrow should
    already be available in most implementations of DNSSEC by the
    time it is made mandatory.  This document attempts to
@@ -1411,8 +1443,9 @@ li > p:last-of-type {
    algorithms in use today will become mandatory in the
    future.  Published algorithms are continuously subjected to
    cryptographic attack and may become too weak, or even be
-   completely broken, before this document is updated.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
-<p id="section-1.2-2">
+   completely broken, before this document is updated.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-2">
+  [ [TODO (WK): This section needs to be updated. ]]
           This document provides recommendations with respect to
           mandatory-to-implement algorithms, algorithms so weak that
           they cannot be recommended, and algorithms defined in RFCs
@@ -1421,21 +1454,22 @@ li > p:last-of-type {
           document MAY be implemented. For clarification and
           consistency, an algorithm will be specified as MAY in this
           document only when it has been downgraded from a MUST or a
-          RECOMMENDED to a MAY.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
-<p id="section-1.2-3">
+          RECOMMENDED to a MAY.<a href="#section-2.2-2" class="pilcrow">¶</a></p>
+<p id="section-2.2-3">
+  [TODO (WK): Ditto! ]
    Although this document's primary purpose is to update
    algorithm recommendations to keep DNSSEC authentication secure
    over time, it also aims to do so in such a way that DNSSEC
    implementations remain interoperable.  DNSSEC interoperability
    is addressed by an incremental introduction or deprecation of
-   algorithms.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
-<p id="section-1.2-4">
+   algorithms.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
+<p id="section-2.2-4">
    <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> considers the term SHOULD
    equivalent to RECOMMENDED, and SHOULD NOT equivalent to NOT
    RECOMMENDED. The authors of this document have chosen to use the
    terms RECOMMENDED and NOT RECOMMENDED, as this more clearly
-   expresses the recommendations to implementers.<a href="#section-1.2-4" class="pilcrow">¶</a></p>
-<p id="section-1.2-5">
+   expresses the recommendations to implementers.<a href="#section-2.2-4" class="pilcrow">¶</a></p>
+<p id="section-2.2-5">
    It is expected that deprecation of an algorithm will be
    performed gradually.  This provides time for various
    implementations to update their implemented algorithms while
@@ -1444,8 +1478,8 @@ li > p:last-of-type {
    to NOT RECOMMENDED or MAY, instead of to MUST NOT.  Similarly,
    an algorithm that has not been mentioned as
    mandatory-to-implement is expected to be introduced with a
-   RECOMMENDED instead of a MUST.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
-<p id="section-1.2-6">
+   RECOMMENDED instead of a MUST.<a href="#section-2.2-5" class="pilcrow">¶</a></p>
+<p id="section-2.2-6">
    Since the effect of using an unknown DNSKEY algorithm is
    that the zone is treated as insecure, it is recommended
    that algorithms downgraded to NOT RECOMMENDED or lower
@@ -1454,16 +1488,16 @@ li > p:last-of-type {
    deprecated algorithms to become less and less common over
    time.  Once an algorithm has reached a sufficiently low
    level of deployment, it can be marked as MUST NOT, so that
-   recursive resolvers can remove support for validating it.<a href="#section-1.2-6" class="pilcrow">¶</a></p>
-<p id="section-1.2-7">
+   recursive resolvers can remove support for validating it.<a href="#section-2.2-6" class="pilcrow">¶</a></p>
+<p id="section-2.2-7">
    Recursive nameservers are encouraged to retain support for all
-   algorithms not marked as MUST NOT.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
+   algorithms not marked as MUST NOT.<a href="#section-2.2-7" class="pilcrow">¶</a></p>
 </section>
-<section id="section-1.3">
+<section id="section-2.3">
         <h3 id="name-document-audience">
-<a href="#section-1.3" class="section-number selfRef">1.3. </a><a href="#name-document-audience" class="section-name selfRef">Document Audience</a>
+<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-document-audience" class="section-name selfRef">Document Audience</a>
         </h3>
-<p id="section-1.3-1">
+<p id="section-2.3-1">
    The recommendations of this document mostly target DNSSEC
    implementers, as implementations need to meet both high
    security expectations as well as high interoperability
@@ -1473,36 +1507,36 @@ li > p:last-of-type {
    a user who wishes to deploy and configure DNSSEC with only the
    safest algorithm.  On the other hand, the comments and
    recommendations in this document are also expected to be
-   useful for such users.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
+   useful for such users.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
 </section>
 </section>
-</div>
 <div id="mustshouldmay">
-<section id="section-2">
+<section id="section-3">
       <h2 id="name-conventions-used-in-this-do">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-conventions-used-in-this-do" class="section-name selfRef">Conventions Used in This Document</a>
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-conventions-used-in-this-do" class="section-name selfRef">Conventions Used in This Document</a>
       </h2>
-<p id="section-2-1">
+<p id="section-3-1">
  The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
  NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and
  "OPTIONAL" in this document are to be interpreted as described
  in <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span>
         <span>[<a href="#RFC8174" class="xref">RFC8174</a>]</span> when, and only when, they appear in all
- capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
+ capitals, as shown here.<a href="#section-3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="algs">
-<section id="section-3">
+<section id="section-4">
       <h2 id="name-algorithm-selection">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-algorithm-selection" class="section-name selfRef">Algorithm Selection</a>
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-algorithm-selection" class="section-name selfRef">Algorithm Selection</a>
       </h2>
 <div id="algs_dnskey">
-<section id="section-3.1">
+<section id="section-4.1">
         <h3 id="name-dnskey-algorithms">
-<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-dnskey-algorithms" class="section-name selfRef">DNSKEY Algorithms</a>
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-dnskey-algorithms" class="section-name selfRef">DNSKEY Algorithms</a>
         </h3>
-<p id="section-3.1-1">
-   Implementation recommendations for DNSKEY algorithms <span>[<a href="#DNSKEY-IANA" class="xref">DNSKEY-IANA</a>]</span>.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-1">
+   Implementation recommendations for DNSKEY algorithms <span>[<a href="#DNSKEY-IANA" class="xref">DNSKEY-IANA</a>]</span>.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">[TODO (WK): Here is were we move things to a registry... ]<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 <div id="tbl_dnskey">
 <table class="center" id="table-1">
           <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
@@ -1590,24 +1624,24 @@ li > p:last-of-type {
           </tbody>
         </table>
 </div>
-<p id="section-3.1-3">
+<p id="section-4.1-4">
    RSAMD5 is not widely deployed and there is an industry-wide
-   trend to deprecate MD5 usage.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
-<p id="section-3.1-4">
+   trend to deprecate MD5 usage.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+<p id="section-4.1-5">
    RSASHA1 and RSASHA1-NSEC3-SHA1 are widely deployed, although
    zones deploying it are recommended to switch to
    ECDSAP256SHA256 as there is an industry-wide trend to move
    to elliptic curve cryptography.  RSASHA1 does not support
    NSEC3.  RSASHA1-NSEC3-SHA1 can be used with or without
-   NSEC3.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">
+   NSEC3.<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+<p id="section-4.1-6">
    DSA and DSA-NSEC3-SHA1 are not widely deployed and
    vulnerable to private key compromise when generating
    signatures using a weak or compromised random number
-   generator.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
-<p id="section-3.1-6">
-   RSASHA256 is in wide use and considered strong.<a href="#section-3.1-6" class="pilcrow">¶</a></p>
-<p id="section-3.1-7">
+   generator.<a href="#section-4.1-6" class="pilcrow">¶</a></p>
+<p id="section-4.1-7">
+   RSASHA256 is in wide use and considered strong.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
+<p id="section-4.1-8">
    RSASHA512 is NOT RECOMMENDED for DNSSEC Signing because it
    has not seen wide deployment, but there are some deployments
    hence DNSSEC Validation MUST implement RSASHA512 to ensure
@@ -1616,21 +1650,21 @@ li > p:last-of-type {
    therefore it is discouraged to use RSASHA512, as it will
    only make deprecation of older algorithms harder.  People
    that wish to use a cryptographically stronger algorithm
-   should switch to elliptic curve cryptography algorithms.<a href="#section-3.1-7" class="pilcrow">¶</a></p>
-<p id="section-3.1-8">
+   should switch to elliptic curve cryptography algorithms.<a href="#section-4.1-8" class="pilcrow">¶</a></p>
+<p id="section-4.1-9">
    ECC-GOST (GOST R 34.10-2001) has been superseded by GOST R
    34.10-2012 in <span>[<a href="#RFC7091" class="xref">RFC7091</a>]</span>. GOST R 34.10-2012
-   has been standardized for use in DNSSEC in 
-   draft-ietf-dnsop-rfc5933-bis.<a href="#section-3.1-8" class="pilcrow">¶</a></p>
-<p id="section-3.1-9">
+   has been standardized for use in DNSSEC in
+   draft-ietf-dnsop-rfc5933-bis.<a href="#section-4.1-9" class="pilcrow">¶</a></p>
+<p id="section-4.1-10">
    ECDSAP256SHA256 provides more cryptographic strength
    with a shorter signature length than either RSASHA256 or
    RSASHA512.  ECDSAP256SHA256 has been widely deployed and
    therefore it is now at MUST level for both validation and
    signing.  It is RECOMMENDED to use deterministic digital signature
    generation procedure of the ECDSA (<span>[<a href="#RFC6979" class="xref">RFC6979</a>]</span>)
-   when implementing ECDSAP256SHA256 (and ECDSAP384SHA384).<a href="#section-3.1-9" class="pilcrow">¶</a></p>
-<p id="section-3.1-10">
+   when implementing ECDSAP256SHA256 (and ECDSAP384SHA384).<a href="#section-4.1-10" class="pilcrow">¶</a></p>
+<p id="section-4.1-11">
    ECDSAP384SHA384 shares the same properties as
    ECDSAP256SHA256, but offers a modest security advantage over
    ECDSAP256SHA256 (192 bits of strength versus 128 bits).  For
@@ -1639,8 +1673,8 @@ li > p:last-of-type {
    therefore recommended for signing.  While it is unlikely for
    a DNSSEC use case requiring 192-bit security strength
    to arise, ECDSA384SHA384 is provided for such applications
-   and it MAY be used for signing in these cases.<a href="#section-3.1-10" class="pilcrow">¶</a></p>
-<p id="section-3.1-11">
+   and it MAY be used for signing in these cases.<a href="#section-4.1-11" class="pilcrow">¶</a></p>
+<p id="section-4.1-12">
    ED25519 and ED448 use Edwards-curve Digital Security
    Algorithm (EdDSA).  There are three main advantages of the
    EdDSA algorithm: It does not require the use of a unique
@@ -1650,32 +1684,32 @@ li > p:last-of-type {
    less prone to implementation errors (<span>[<a href="#RFC8032" class="xref">RFC8032</a>]</span>, <span>[<a href="#RFC8080" class="xref">RFC8080</a>]</span>).  It is
    expected that ED25519 will become the future RECOMMENDED
    default algorithm once there's enough support for this
-   algorithm in the deployed DNSSEC validators.<a href="#section-3.1-11" class="pilcrow">¶</a></p>
+   algorithm in the deployed DNSSEC validators.<a href="#section-4.1-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="algs_dnskey_recommendation">
-<section id="section-3.2">
+<section id="section-4.2">
         <h3 id="name-dnskey-algorithm-recommenda">
-<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-dnskey-algorithm-recommenda" class="section-name selfRef">DNSKEY Algorithm Recommendation</a>
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-dnskey-algorithm-recommenda" class="section-name selfRef">DNSKEY Algorithm Recommendation</a>
         </h3>
-<p id="section-3.2-1">
-   Operation recommendation for new and existing deployments.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">
+<p id="section-4.2-1">
+   Operation recommendation for new and existing deployments.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">
    Due to industry-wide trend to move to elliptic curve cryptography, the
    ECDSAP256SHA256 is RECOMMENDED DNSKEY algorithm for use by new DNSSEC
    deployments, and users of RSA based algorithms SHOULD upgrade to
-   ECDSAP256SHA256.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+   ECDSAP256SHA256.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="algs_ds">
-<section id="section-3.3">
+<section id="section-4.3">
         <h3 id="name-ds-and-cds-algorithms">
-<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-ds-and-cds-algorithms" class="section-name selfRef">DS and CDS Algorithms</a>
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-ds-and-cds-algorithms" class="section-name selfRef">DS and CDS Algorithms</a>
         </h3>
-<p id="section-3.3-1">
+<p id="section-4.3-1">
    Recommendations for Delegation Signer Digest Algorithms
    <span>[<a href="#DNSKEY-IANA" class="xref">DNSKEY-IANA</a>]</span> These also apply to the CDS
-   RRTYPE as specified in <span>[<a href="#RFC7344" class="xref">RFC7344</a>]</span><a href="#section-3.3-1" class="pilcrow">¶</a></p>
+   RRTYPE as specified in <span>[<a href="#RFC7344" class="xref">RFC7344</a>]</span><a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <div id="tbl_ds">
 <table class="center" id="table-2">
           <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
@@ -1721,24 +1755,24 @@ li > p:last-of-type {
           </tbody>
         </table>
 </div>
-<p id="section-3.3-3" class="keepWithPrevious">
+<p id="section-4.3-3" class="keepWithPrevious">
           [*] - This is a special type of CDS record signaling removal of
-   DS at the parent in <span>[<a href="#RFC8078" class="xref">RFC8078</a>]</span><a href="#section-3.3-3" class="pilcrow">¶</a></p>
-<p id="section-3.3-4">
-   NULL is a special case, see <span>[<a href="#RFC8078" class="xref">RFC8078</a>]</span><a href="#section-3.3-4" class="pilcrow">¶</a></p>
-<p id="section-3.3-5">
+   DS at the parent in <span>[<a href="#RFC8078" class="xref">RFC8078</a>]</span><a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">
+   NULL is a special case, see <span>[<a href="#RFC8078" class="xref">RFC8078</a>]</span><a href="#section-4.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.3-5">
    SHA-1 is in declining use for DS records, so it is NOT
    RECOMMENDED for validators to implement SHA-1 validation.
    SHA-1 MUST NOT be used in generating new DS and CDS records.
    (See Operational Considerations for caveats when upgrading
-   from SHA-1 to SHA-256 DS Algorithm.)<a href="#section-3.3-5" class="pilcrow">¶</a></p>
-<p id="section-3.3-6">
-   SHA-256 is in wide use and considered strong.<a href="#section-3.3-6" class="pilcrow">¶</a></p>
-<p id="section-3.3-7">
+   from SHA-1 to SHA-256 DS Algorithm.)<a href="#section-4.3-5" class="pilcrow">¶</a></p>
+<p id="section-4.3-6">
+   SHA-256 is in wide use and considered strong.<a href="#section-4.3-6" class="pilcrow">¶</a></p>
+<p id="section-4.3-7">
    GOST R 34.11-94 has been superseded by GOST R 34.11-2012 in
    <span>[<a href="#RFC6986" class="xref">RFC6986</a>]</span>.  The GOST R 34.11-2012 hasn't been
-   standardized for use in DNSSEC.<a href="#section-3.3-7" class="pilcrow">¶</a></p>
-<p id="section-3.3-8">
+   standardized for use in DNSSEC.<a href="#section-4.3-7" class="pilcrow">¶</a></p>
+<p id="section-4.3-8">
    SHA-384 shares the same properties as SHA-256, but offers a
    modest security advantage over SHA-384 (384-bits of strength
    versus 256-bits).  For most applications of DNSSEC, SHA-256
@@ -1747,35 +1781,35 @@ li > p:last-of-type {
    While it is unlikely for a DNSSEC use case requiring
    384-bit security strength to arise, SHA-384 is provided for
    such applications and it MAY be used for generating DS and
-   CDS records in these cases.<a href="#section-3.3-8" class="pilcrow">¶</a></p>
+   CDS records in these cases.<a href="#section-4.3-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="algs_ds_recommendation">
-<section id="section-3.4">
+<section id="section-4.4">
         <h3 id="name-ds-and-cds-algorithm-recomm">
-<a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-ds-and-cds-algorithm-recomm" class="section-name selfRef">DS and CDS Algorithm Recommendation</a>
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-ds-and-cds-algorithm-recomm" class="section-name selfRef">DS and CDS Algorithm Recommendation</a>
         </h3>
-<p id="section-3.4-1">
-   Operation recommendation for new and existing deployments.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
-<p id="section-3.4-2">
-   The SHA-256 is RECOMMENDED for the DS and CDS algorithms.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+<p id="section-4.4-1">
+   Operation recommendation for new and existing deployments.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-2">
+   The SHA-256 is RECOMMENDED for the DS and CDS algorithms.<a href="#section-4.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
 </div>
 <div id="security">
-<section id="section-4">
+<section id="section-5">
       <h2 id="name-security-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-4-1">
+<p id="section-5-1">
  The security of cryptographic systems depends on both
  the strength of the cryptographic algorithms chosen and the
  strength of the keys used with those algorithms.  The security
  also depends on the engineering of the protocol used by the
  system to ensure that there are no non-cryptographic ways to
- bypass the security of the overall system.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<p id="section-4-2">
+ bypass the security of the overall system.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">
  This document concerns itself with the selection of
  cryptographic algorithms for the use of DNSSEC, specifically
  with the selection of "mandatory-to-implement" algorithms.
@@ -1786,50 +1820,50 @@ li > p:last-of-type {
  foreseeable future.  However, this isn't necessarily forever,
  and it is expected that new revisions of this document will be
  issued from time to time to reflect the current best practices
- in this area.<a href="#section-4-2" class="pilcrow">¶</a></p>
-<p id="section-4-3">
+ in this area.<a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-3">
  Retiring an algorithm too soon would result in a zone signed
  with the retired algorithm being downgraded to the equivalent of
  an unsigned zone.  Therefore, algorithm deprecation must be
  done very slowly and only after careful consideration and
- measurement of its use.<a href="#section-4-3" class="pilcrow">¶</a></p>
+ measurement of its use.<a href="#section-5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="operation">
-<section id="section-5">
+<section id="section-6">
       <h2 id="name-operational-considerations">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-operational-considerations" class="section-name selfRef">Operational Considerations</a>
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-operational-considerations" class="section-name selfRef">Operational Considerations</a>
       </h2>
-<p id="section-5-1">
+<p id="section-6-1">
  DNSKEY algorithm rollover in a live zone is a complex
  process.  See <span>[<a href="#RFC6781" class="xref">RFC6781</a>]</span> and <span>[<a href="#RFC7583" class="xref">RFC7583</a>]</span>
- for guidelines on how to perform algorithm rollovers.<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2">
+ for guidelines on how to perform algorithm rollovers.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">
  DS algorithm rollover in a live zone is also a complex
  process.  Upgrading algorithm at the same time as rolling the
  new KSK key will lead to DNSSEC validation failures, and users
  MUST upgrade the DS algorithm first before rolling the Key
- Signing Key.<a href="#section-5-2" class="pilcrow">¶</a></p>
+ Signing Key.<a href="#section-6-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="implementations">
-<section id="section-6">
+<section id="section-7">
       <h2 id="name-implementation-report">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-implementation-report" class="section-name selfRef">Implementation Report</a>
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-implementation-report" class="section-name selfRef">Implementation Report</a>
       </h2>
 <div id="implementations_dnskey">
-<section id="section-6.1">
+<section id="section-7.1">
         <h3 id="name-dnskey-algorithms-2">
-<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-dnskey-algorithms-2" class="section-name selfRef">DNSKEY Algorithms</a>
+<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-dnskey-algorithms-2" class="section-name selfRef">DNSKEY Algorithms</a>
         </h3>
-<p id="section-6.1-1">TODO: this needs updating, and current practice is to have
- this deleted at publication too.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
-<p id="section-6.1-2">
+<p id="section-7.1-1">TODO: this needs updating, and current practice is to have
+ this deleted at publication too.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<p id="section-7.1-2">
    The following table contains the status of support in the open-source
    DNS signers and validators in the current released versions as of the
    time writing this document.  Usually, the support for specific
    algorithm has to be also included in the cryptographic libraries that
-   the software use.<a href="#section-6.1-2" class="pilcrow">¶</a></p>
+   the software use.<a href="#section-7.1-2" class="pilcrow">¶</a></p>
 <div id="tbl_implementations">
 <table class="center" id="table-3">
           <caption><a href="#table-3" class="selfRef">Table 3</a></caption>
@@ -1948,39 +1982,39 @@ li > p:last-of-type {
 </section>
 </div>
 <div id="iana">
-<section id="section-7">
+<section id="section-8">
       <h2 id="name-iana-considerations">
-<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-7-1">This document makes no requests of IANA.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-8-1">This document makes no requests of IANA.<a href="#section-8-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="ack">
-<section id="section-8">
+<section id="section-9">
       <h2 id="name-acknowledgements">
-<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-acknowledgements" class="section-name selfRef">Acknowledgements</a>
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-acknowledgements" class="section-name selfRef">Acknowledgements</a>
       </h2>
-<p id="section-8-1">
+<p id="section-9-1">
  This document borrows text from RFC 4307 by Jeffrey I.
  Schiller of the Massachusetts Institute of Technology (MIT)
  and the 4307bis document by Yoav Nir, Tero Kivinen, Paul
  Wouters and Daniel Migault.  Much of the original text has
- been copied verbatim.<a href="#section-8-1" class="pilcrow">¶</a></p>
-<p id="section-8-2">
+ been copied verbatim.<a href="#section-9-1" class="pilcrow">¶</a></p>
+<p id="section-9-2">
  We wish to thank Michael Sinatra, Roland van Rijswijk-Deij,
  Olafur Gudmundsson, Paul Hoffman and Evan Hunt for their imminent
- feedback.<a href="#section-8-2" class="pilcrow">¶</a></p>
-<p id="section-8-3">
- Kudos to Roy Arends for bringing the DS rollover issue to the daylight.<a href="#section-8-3" class="pilcrow">¶</a></p>
+ feedback.<a href="#section-9-2" class="pilcrow">¶</a></p>
+<p id="section-9-3">
+ Kudos to Roy Arends for bringing the DS rollover issue to the daylight.<a href="#section-9-3" class="pilcrow">¶</a></p>
 </section>
 </div>
-<section id="section-9">
+<section id="section-10">
       <h2 id="name-references">
-<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
-<section id="section-9.1">
+<section id="section-10.1">
         <h3 id="name-normative-references">
-<a href="#section-9.1" class="section-number selfRef">9.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-10.1" class="section-number selfRef">10.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
@@ -1997,9 +2031,9 @@ li > p:last-of-type {
 <dd class="break"></dd>
 </dl>
 </section>
-<section id="section-9.2">
+<section id="section-10.2">
         <h3 id="name-informative-references">
-<a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
 <dt id="RFC4034">[RFC4034]</dt>
@@ -2020,7 +2054,7 @@ li > p:last-of-type {
 <dd class="break"></dd>
 <dt id="RFC6605">[RFC6605]</dt>
         <dd>
-<span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">W C A. Wijngaards</span>, <span class="refTitle">"Elliptic Curve Digital Signature Algorithm (DSA) for DNSSEC"</span>, <span class="seriesInfo">RFC 6605</span>, <span class="seriesInfo">DOI 10.17487/RFC6605</span>, <time datetime="2012-04" class="refDate">April 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6605">https://www.rfc-editor.org/info/rfc6605</a>&gt;</span>. </dd>
+<span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">W.C.A. Wijngaards</span>, <span class="refTitle">"Elliptic Curve Digital Signature Algorithm (DSA) for DNSSEC"</span>, <span class="seriesInfo">RFC 6605</span>, <span class="seriesInfo">DOI 10.17487/RFC6605</span>, <time datetime="2012-04" class="refDate">April 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6605">https://www.rfc-editor.org/info/rfc6605</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6781">[RFC6781]</dt>
         <dd>
@@ -2061,6 +2095,10 @@ li > p:last-of-type {
 <dt id="RFC8080">[RFC8080]</dt>
         <dd>
 <span class="refAuthor">Sury, O.</span> and <span class="refAuthor">R. Edmonds</span>, <span class="refTitle">"Edwards-Curve Digital Security Algorithm (EdDSA) for DNSSEC"</span>, <span class="seriesInfo">RFC 8080</span>, <span class="seriesInfo">DOI 10.17487/RFC8080</span>, <time datetime="2017-02" class="refDate">February 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8080">https://www.rfc-editor.org/info/rfc8080</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9364">[RFC9364]</dt>
+        <dd>
+<span class="refAuthor">Hoffman, P.</span>, <span class="refTitle">"DNS Security Extensions (DNSSEC)"</span>, <span class="seriesInfo">BCP 237</span>, <span class="seriesInfo">RFC 9364</span>, <span class="seriesInfo">DOI 10.17487/RFC9364</span>, <time datetime="2023-02" class="refDate">February 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9364">https://www.rfc-editor.org/info/rfc9364</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="DNSKEY-IANA">[DNSKEY-IANA]</dt>
         <dd>
@@ -2107,12 +2145,25 @@ li > p:last-of-type {
 </div>
 </address>
 <address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Warren Kumari</span></div>
+<div dir="auto" class="left"><span class="org">Google</span></div>
+<div dir="auto" class="left"><span class="street-address">1600 Amphitheatre Parkway</span></div>
+<div dir="auto" class="left">
+<span class="locality">Mountain View, CA</span>,  <span class="postal-code">94043</span>
+</div>
+<div dir="auto" class="left"><span class="country-name">United States of America</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:warren@kumari.net" class="email">warren@kumari.net</a>
+</div>
+</address>
+<address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Paul Wouters</span></div>
-<div dir="auto" class="left"><span class="org">Red Hat</span></div>
+<div dir="auto" class="left"><span class="org">Aiven</span></div>
 <div dir="auto" class="left"><span class="country-name">Canada</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:pwouters@redhat.com" class="email">pwouters@redhat.com</a>
+<a href="mailto:paul.wouters@aiven.io" class="email">paul.wouters@aiven.io</a>
 </div>
 </address>
 <address class="vcard">

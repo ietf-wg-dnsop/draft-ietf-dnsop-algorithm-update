@@ -77,7 +77,6 @@
         <email>ondrej@isc.org</email>
       </address>
     </author>
-    <date year="2022"/>
     <area>Security</area>
     <workgroup>dnsop</workgroup>
     <keyword>Internet-Draft</keyword>
@@ -120,9 +119,8 @@
   [ Editor: This is similar to the process used for the TLS ciphersuites -
   https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4 ]
       </t>
-
+     </section>
       <section title="Terminology">
-  </t>
 
       <section title="Updating Algorithm Implementation Requirements and Usage Guidance">
 	<t>
