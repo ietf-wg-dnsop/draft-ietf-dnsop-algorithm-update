@@ -9,7 +9,6 @@
 <!ENTITY RFC5933 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5933.xml">
 <!ENTITY RFC6605 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6605.xml">
 <!ENTITY RFC6781 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6781.xml">
-<!ENTITY RFC6944 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6944.xml">
 <!ENTITY RFC6979 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6979.xml">
 <!ENTITY RFC6986 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6986.xml">
 <!ENTITY RFC7091 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7091.xml">
@@ -565,7 +564,6 @@
       &RFC5933;
       &RFC6605;
       &RFC6781;
-      &RFC6944;
       &RFC6979;
       &RFC6986;
       &RFC7091;
