@@ -20,6 +20,7 @@
 <!ENTITY RFC8080 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8080.xml">
 <!ENTITY RFC8174 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml">
 <!ENTITY RFC8624 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8624.xml">
+<!ENTITY RFC9364 PUBLIC "" "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.9364.xml">
 ]>
 
 <?rfc toc="yes"?>
@@ -106,7 +107,7 @@
 
     <section anchor="introduction" title="Introduction">
       <t>
-  DNS Security Extensions (DNSSEC) <xref target="RFC4034"/> is used to provide
+  DNS Security Extensions (DNSSEC) <xref target="RFC9364"/> is used to provide
   authentication of DNS data. The DNSSEC signing algorithms are defined by
   various RFCs, including <xref target="RFC4034"/>, <xref target="RFC5155"/>,
 	<xref target="RFC5702"/>, <xref target="RFC5933"/>, <xref
@@ -575,6 +576,7 @@
       &RFC8032;
       &RFC8078;
       &RFC8080;
+      &RFC9364;
       <reference anchor="DNSKEY-IANA" target="http://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml">
         <front>
           <title>DNSKEY Algorithms</title>
