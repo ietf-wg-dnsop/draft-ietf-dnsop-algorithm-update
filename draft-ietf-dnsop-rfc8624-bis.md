@@ -1,10 +1,11 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-02
+docname: draft-ietf-dnsop-rfc8624-bis-03
 category: info
 ipr: trust200902
 stream: IETF
+updates: rfc8624
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, docmapping]
@@ -68,7 +69,7 @@ informative:
    interoperability between DNS resolvers and DNS authoritative servers, it is
    necessary to specify both a set of algorithm implementation requirements and
    usage guidelines to ensure that there is at least one algorithm that all
-   implementations support.  This document updates [RFC8624] by moving the
+   implementations support.  This document updates RFC8624 by moving the
    canonical source of algorithm implementation requirements and usage guidance
    for DNSSEC from [RFC8624] to an IANA registry.  Future extensions
    to this registry can be made under new, incremental update RFCs.
@@ -388,6 +389,11 @@ informative:
 
 # ChangeLog
 
+## Changes from ietf-02 to ietf-03
+
+   * Fixed the reference in the Abstract (no links in Abstracts)
+   * Added Updates: to the header.
+
 ## Changes from ietf-01 to ietf-02
 
    * Changed the MUST values in the tables for the Use columns to
@@ -397,7 +403,7 @@ informative:
 
 ## Changes from ietf-00 to ietf-01
 
-   * Only NIT fixing 
+   * Only NIT fixing
 
 ## Changes from hardaker-04 to ietf-00
 
