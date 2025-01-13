@@ -56,14 +56,6 @@ informative:
 
 --- abstract
 
-   <EDITOR NOTE: This document does not change the status (MUST, MAY,
-   RECOMMENDED, etc) of any of the algorithms listed in [RFC8624]; that is
-   the work of future documents.  Instead, this document moves
-   the canonical list of algorithms from [RFC8624] to an IANA registry.
-   This is done for two reasons: 1) to allow the list to be updated more
-   easily, and, much more importantly, 2) to allow the list to be more
-   easily referenced.>
-
    The DNSSEC protocol makes use of various cryptographic algorithms to provide
    authentication of DNS data and proof of non-existence.  To ensure
    interoperability between DNS resolvers and DNS authoritative servers, it is
@@ -71,8 +63,13 @@ informative:
    usage guidelines to ensure that there is at least one algorithm that all
    implementations support.  This document updates RFC8624 by moving the
    canonical source of algorithm implementation requirements and usage guidance
-   for DNSSEC from [RFC8624] to an IANA registry.  Future extensions
-   to this registry can be made under new, incremental update RFCs.
+   for DNSSEC from [RFC8624] to an IANA registry. This is done both to allow
+   the list to be more easily updated, to allow the list to be more easily
+   referenced. Future extensions to this registry can be made under new,
+   incremental update RFCs.
+
+   The document does not change the status (MUST, MAY, RECOMMENDED, etc) of any
+   of the algorithms listed in [RFC8624]; that is the work of future documents.
 
 --- middle
 
@@ -92,10 +89,10 @@ informative:
    Additionally, as advice to operators, it adds recommendations for
    deploying and the usage of these algorithms.
 
-   <Editor: This is similar to the process used for the
+    This is similar to the process used for the
    [TLS-ciphersuites] registry, where the canonical list of
    ciphersuites is in the IANA registry, and the RFCs reference the
-   IANA registry.>
+   IANA registry.
 
 ##  Document Audience
 
@@ -239,11 +236,6 @@ informative:
    RECOMMENDED algorithms in the "use" column, operators should choose
    the best algorithm according to local policy.
 
-   <Editor's note: A space was deliberately added to "RSASHA1-NSEC3-
-   SHA1" to make the table fit within the standard internet draft text
-   width.  Additionally the algorithm number column was abbreviated to
-   'N'.>
-
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | N  | Mnemonics           | Use for DNSSEC Signing | Use for DNSSEC Validation | Implement for DNSSEC Signing | Implement for DNSSEC Validation |
    |----|---------------------|------------------------|---------------------------|
@@ -310,15 +302,15 @@ informative:
    of the protocol used by the system to ensure that there are no non-
    cryptographic ways to bypass the security of the overall system.
 
-   This document concerns itself with the selection of cryptographic
-   algorithms for the use of DNSSEC, specifically with the selection
-   of "mandatory-to-implement" algorithms.  The algorithms identified
-   in this document as MUST or RECOMMENDED to implement are not known
-   to be broken at the current time, and cryptographic research so far
-   leads us to believe that they are likely to remain secure into the
-   foreseeable future.  However, this isn't necessarily forever, and
-   it is expected that future documents will be issued from time to
-   time to reflect the current best practices in this area.
+   This document concerns itself with the selection of cryptographic algorithms
+   for the use of DNSSEC, specifically with the selection of
+   "mandatory-to-implement" algorithms.  The algorithms identified in this
+   document as MUST or RECOMMENDED to implement are not known to be broken at
+   the current time, and cryptographic research so far leads us to believe that
+   they are likely to remain adequately secure unless significant and
+   unexpected discovery is made. However, this isn't necessarily forever, and
+   it is expected that future documents will be issued from time to time to
+   reflect the current best practices in this area.
 
    Retiring an algorithm too soon would result in a zone signed with the
    retired algorithm being downgraded to the equivalent of an unsigned
