@@ -1,4 +1,4 @@
-# Original makefile from https://github.com/martinthomson/i-d-template 
+# Original makefile from https://github.com/martinthomson/i-d-template
 
 # Edited by wkumari to remove a bunch of the extra stuff I'll never use.
 
@@ -30,7 +30,7 @@ rfcdiff ?= rfcdiff --browse
 #   https://www.gnu.org/software/enscript/
 enscript ?= enscript
 #   http://www.ghostscript.com/
-ps2pdf ?= ps2pdf 
+ps2pdf ?= ps2pdf
 
 
 ## Work out what to build
@@ -48,7 +48,7 @@ draft_type := $(suffix $(firstword $(wildcard $(draft).md $(draft).org $(draft).
 
 .PHONY: latest txt html pdf submit diff clean update ghpages README.txt
 
-latest: txt html
+latest: txt html README.txt
 txt: $(draft).txt
 html: $(draft).html
 pdf: $(draft).pdf
