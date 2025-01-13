@@ -89,10 +89,9 @@ informative:
    Additionally, as advice to operators, it adds recommendations for
    deploying and the usage of these algorithms.
 
-    This is similar to the process used for the
-   [TLS-ciphersuites] registry, where the canonical list of
-   ciphersuites is in the IANA registry, and the RFCs reference the
-   IANA registry.
+  This is similar to the process used for the [TLS-ciphersuites] registry,
+  where the canonical list of ciphersuites is in the IANA registry, and the
+  RFCs reference the IANA registry.
 
 ##  Document Audience
 

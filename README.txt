@@ -77,7 +77,7 @@ Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
      1.1.  Document Audience . . . . . . . . . . . . . . . . . . . .   3
      1.2.  Updating Algorithm Requirement Levels . . . . . . . . . .   4
-     1.3.  Requirements notation . . . . . . . . . . . . . . . . . .   4
+     1.3.  Requirements notation . . . . . . . . . . . . . . . . . .   5
    2.  Adding usage and implementation recommendations to the IANA
            DNSSEC tables . . . . . . . . . . . . . . . . . . . . . .   5
    3.  DNS System Algorithm Numbers Column Values  . . . . . . . . .   6
@@ -130,7 +130,9 @@ Internet-Draft      DNSSEC Algorithms Update Process        January 2025
    operators, it adds recommendations for deploying and the usage of
    these algorithms.
 
-This is similar to the process used for the    [TLS-ciphersuites] registry, where the canonical list of    ciphersuites is in the IANA registry, and the RFCs reference the    IANA registry.
+   This is similar to the process used for the [TLS-ciphersuites]
+   registry, where the canonical list of ciphersuites is in the IANA
+   registry, and the RFCs reference the IANA registry.
 
 1.1.  Document Audience
 
@@ -154,13 +156,11 @@ This is similar to the process used for the    [TLS-ciphersuites] registry, wher
    software must be conservative to minimize the risk of algorithm
    compromise.
 
-   The perspective of implementers may differ from that of an operator
-   who wishes to deploy and configure DNSSEC with only the safest
-   algorithm.  As such this document also adds new recommendations about
-   which algorithms should be deploy regardless of implementation
-   status.  In general it is expected that deployment of aging
-   algorithms should generally be reduced before implementations stop
-   supporting them.
+
+
+
+
+
 
 
 
@@ -169,6 +169,14 @@ Hardaker & Kumari         Expires 17 July 2025                  [Page 3]
 
 Internet-Draft      DNSSEC Algorithms Update Process        January 2025
 
+
+   The perspective of implementers may differ from that of an operator
+   who wishes to deploy and configure DNSSEC with only the safest
+   algorithm.  As such this document also adds new recommendations about
+   which algorithms should be deploy regardless of implementation
+   status.  In general it is expected that deployment of aging
+   algorithms should generally be reduced before implementations stop
+   supporting them.
 
 1.2.  Updating Algorithm Requirement Levels
 
@@ -205,6 +213,19 @@ Internet-Draft      DNSSEC Algorithms Update Process        January 2025
    Validating recursive resolvers are encouraged to retain support for
    all algorithms not marked as MUST NOT.
 
+
+
+
+
+
+
+
+
+Hardaker & Kumari         Expires 17 July 2025                  [Page 4]
+
+Internet-Draft      DNSSEC Algorithms Update Process        January 2025
+
+
 1.3.  Requirements notation
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -218,13 +239,6 @@ Internet-Draft      DNSSEC Algorithms Update Process        January 2025
    document have chosen to use the terms RECOMMENDED and NOT
    RECOMMENDED, as this more clearly expresses the recommendations to
    implementers.
-
-
-
-Hardaker & Kumari         Expires 17 July 2025                  [Page 4]
-
-Internet-Draft      DNSSEC Algorithms Update Process        January 2025
-
 
 2.  Adding usage and implementation recommendations to the IANA DNSSEC
     tables
@@ -258,6 +272,16 @@ Internet-Draft      DNSSEC Algorithms Update Process        January 2025
 
                                   Table 1
 
+
+
+
+
+
+Hardaker & Kumari         Expires 17 July 2025                  [Page 5]
+
+Internet-Draft      DNSSEC Algorithms Update Process        January 2025
+
+
    Adding a new entry to the "DNS System Algorithm Numbers" registry
    with a recommended value of MAY in the "Use for DNSSSEC Signing",
    "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
@@ -274,14 +298,6 @@ Internet-Draft      DNSSEC Algorithms Update Process        January 2025
    "Implement for DNSSSEC Validation" columns requires RFC publication.
    Adding a new entry to, or changing existing values in, the "DNS
    System Algorithm Numbers" registry for the "Use for DNSSSEC
-
-
-
-Hardaker & Kumari         Expires 17 July 2025                  [Page 5]
-
-Internet-Draft      DNSSEC Algorithms Update Process        January 2025
-
-
    Delegation", "Use for DNSSSEC Validation", "Implement for DNSSSEC
    Delegation", or "Implement for DNSSSEC Validation" columns to any
    other value than MAY requires a Standards Action.
@@ -305,22 +321,6 @@ Internet-Draft      DNSSEC Algorithms Update Process        January 2025
    Algorithm Numbers" are shown in Table 2.  When there are multiple
    RECOMMENDED algorithms in the "use" column, operators should choose
    the best algorithm according to local policy.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
