@@ -377,6 +377,9 @@ informative:
   helped shaped this document.  We thank Paul Hoffman and Paul Wouters
   for their contributed text.
 
+  In addition, we would like to thank Steve Crocker, Russ Housely, Shumon
+  Huque, S Moonesamy, Stefan Ubbink, Peter Thomassen, and Tim Wicinski.
+
 --- back
 
 # ChangeLog
