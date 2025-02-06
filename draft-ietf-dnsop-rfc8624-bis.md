@@ -24,6 +24,7 @@ author:
 
 normative:
   RFC2119:
+  RFC8126:
   RFC8174:
   RFC8624:
   RFC9364:
@@ -195,11 +196,15 @@ informative:
    | Digest Algorithm                  | Implement for DNSSSEC Validation |
    |-----------------------------------|----------------------------------|
 
-   Adding a new entry to the "DNS System Algorithm Numbers" registry
-   with a recommended value of MAY in the "Use for DNSSSEC Signing",
-   "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
-   "Implement for DNSSSEC Validation" columns requires RFC
-   publication.  Adding a new entry to, or changing existing values in,
+   Adding a new entry to the "DNS System Algorithm Numbers" registry with a
+   recommended value of MAY in the "Use for DNSSSEC Signing", "Use for DNSSSEC
+   Validation", "Implement for DNSSSEC Signing", or "Implement for DNSSSEC
+   Validation" columns is via the "Specification Required" policy as defined in
+   [RFC8126]. (Ed note (RFC Editor - please delete this before publication): As
+   a reminder: the "Specification Required" policy includes a requirement for a
+   designated expert to review the request.)
+
+   Adding a new entry to, or changing existing values in,
    the "DNS System Algorithm Numbers" registry for the "Use for
    DNSSSEC Signing", "Use for DNSSSEC Validation", "Implement for
    DNSSSEC Signing", or "Implement for DNSSSEC Validation" columns to
@@ -208,8 +213,9 @@ informative:
    Adding a new entry to the "Digest Algorithms" registry with a
    recommended value of MAY in the "Use for DNSSSEC Delegation", "Use
    for DNSSSEC Validation", "Implement for DNSSSEC Delegation", or
-   "Implement for DNSSSEC Validation" columns requires RFC
-   publication.  Adding a new entry to, or changing existing values in,
+   "Implement for DNSSSEC Validation" columns is via the "Specification Required" policy as defined in [RFC8126].
+
+   Adding a new entry to, or changing existing values in,
    the "DNS System Algorithm Numbers" registry for the "Use for
    DNSSSEC Delegation", "Use for DNSSSEC Validation", "Implement for
    DNSSSEC Delegation", or "Implement for DNSSSEC Validation" columns
@@ -350,7 +356,7 @@ informative:
   These values should be populated using values from Table 2 of this
   document.
 
-  Additional, the registration policy for the [DNSKEY-IANA] registry
+  Additionally, the registration policy for the [DNSKEY-IANA] registry
   should match the text describing the requirements in this document.
 
 ## Update to the "Digest Algorithms" table
@@ -370,22 +376,39 @@ informative:
     match the text describing update requirements above.
   * Mark values 128 - 252 as "Reserved"
   * Mark values 253 and 254 as "Reserved for Private Use"
+  * Delete the (now superfluous) column "Status" from the table
 
+  Additionally, the registration policy for the [DS-IANA] registry
+  should match the text describing the requirements in this document.
 
 #  Acknowledgments
 
-  This document is based on, and extends, RFC 8624, which was authored by
-  Paul Wouters, and Ondrej Sury.
+  This document is based on, and extends, RFC 8624, which was authored by Paul
+  Wouters, and Ondrej Sury.
 
-  The contents of this document was heavily discussed by participants
-  of the DNSOP working group.  We appreciate the thoughtfulness of the
-  many opinions expressed by working group participants that all
-  helped shaped this document.  We thank Paul Hoffman and Paul Wouters
-  for their contributed text.
+  The contents of this document was heavily discussed by participants of the
+  DNSOP working group.  We appreciate the thoughtfulness of the many opinions
+  expressed by working group participants that all helped shaped this document.
+  We thank Paul Hoffman and Paul Wouters for their contributed text, and also
+  Shumon Huque, S Moonesamy, Peter Thomassen, Paul Wouters, Stefan Ubbink, and
+  Loganaden Velvindron for their reviews and comments.
+
+
 
 --- back
 
 # ChangeLog
+
+## Changes from ietf-03 to ietf-04
+
+    * Updated "entry requirements" to be "Specification Required".
+    * Marked values 128 - 252 as "Reserved" in "Digest Algorithms" as
+    break-glass mechanism in case we get a flood of these. To align with the
+    "DNS Security Algorithm Numbers" registry (that reserves 123 - ...)
+    * Marked values 253 and 254 as "Reserved for Private Use" in "Digest
+    Algorithms"
+    * Deleted the (now superfluous) column "Status" from the "Digest
+    Algorithms" table, as this is now covered by the new columns.
 
 ## Changes from ietf-02 to ietf-03
 
