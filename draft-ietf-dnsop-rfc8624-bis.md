@@ -200,9 +200,10 @@ informative:
    recommended value of MAY in the "Use for DNSSSEC Signing", "Use for DNSSSEC
    Validation", "Implement for DNSSSEC Signing", or "Implement for DNSSSEC
    Validation" columns is via the "Specification Required" policy as defined in
-   [RFC8126]. (Ed note (RFC Editor - please delete this before publication): As
-   a reminder: the "Specification Required" policy includes a requirement for a
-   designated expert to review the request.)
+   [RFC8126]. New entries will have the value of MAY for all columns. (Ed note
+   (RFC Editor - please delete this before publication): As a reminder: the
+   "Specification Required" policy includes a requirement for a designated
+   expert to review the request.)
 
    Adding a new entry to, or changing existing values in,
    the "DNS System Algorithm Numbers" registry for the "Use for
@@ -356,8 +357,8 @@ informative:
   These values should be populated using values from Table 2 of this
   document.
 
-  Additionally, the registration policy for the [DNSKEY-IANA] registry
-  should match the text describing the requirements in this document.
+  Additionally, the registration policy for the [DNSKEY-IANA] registry should
+  match the text describing the requirements in Section 2 of this document.
 
 ## Update to the "Digest Algorithms" table
 
@@ -378,8 +379,8 @@ informative:
   * Mark values 253 and 254 as "Reserved for Private Use"
   * Delete the (now superfluous) column "Status" from the table
 
-  Additionally, the registration policy for the [DS-IANA] registry
-  should match the text describing the requirements in this document.
+  Additionally, the registration policy for the [DS-IANA] registry should match
+  the text in describing the requirements in Section 2 of this document.
 
 #  Acknowledgments
 
