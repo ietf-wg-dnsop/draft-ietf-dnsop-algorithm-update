@@ -1,7 +1,7 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-05
+docname: draft-ietf-dnsop-rfc8624-bis-06
 category: info
 ipr: trust200902
 stream: IETF
@@ -111,9 +111,9 @@ informative:
    new reality, and to allow for a smooth transition to more secure algorithms,
    as well as deprecation of algorithms deemed to no longer be secure.
 
-   Cryptographic algorithm choices implemented in and required by
-   software must be conservative to minimize the risk of algorithm
-   compromise.
+   Implementations need to be conservative in the selection of
+   algorithms they implement in order to minimize both code complexity
+   and the  attack surface.
 
    The perspective of implementers may differ from that of an operator
    who wishes to deploy and configure DNSSEC with only the safest
@@ -197,14 +197,17 @@ informative:
    | Digest Algorithm                  | Implement for DNSSSEC Validation |
    |-----------------------------------|----------------------------------|
 
-   Adding a new entry to the "DNS System Algorithm Numbers" registry with a
-   recommended value of "MAY" in the "Use for DNSSSEC Signing", "Use for DNSSSEC
-   Validation", "Implement for DNSSSEC Signing", or "Implement for DNSSSEC
-   Validation" columns is via the "Specification Required" policy as defined in
-   [RFC8126]. New entries will have the value of "MAY" for all columns. (Ed note
-   (RFC Editor - please delete this before publication): As a reminder: the
-   "Specification Required" policy includes a requirement for a designated
-   expert to review the request.)
+   Adding a new entry to the "DNS System Algorithm Numbers" registry
+   with a recommended value of "MAY" in the "Use for DNSSSEC Signing",
+   "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
+   "Implement for DNSSSEC Validation" columns is via the
+   "Specification Required" policy as defined in [RFC8126] in order to
+   promote continued evolution of DNSSEC algorithms and DNSSEC
+   agility.  New entries add through the "Specification Required"
+   process will have the value of "MAY" for all columns. (Ed note (RFC
+   Editor - please delete this before publication): As a reminder: the
+   "Specification Required" policy includes a requirement for a
+   designated expert to review the request.)
 
    Adding a new entry to, or changing existing values in,
    the "DNS System Algorithm Numbers" registry for the "Use for
@@ -320,7 +323,7 @@ informative:
    This document concerns itself with the selection of cryptographic algorithms
    for the use of DNSSEC, specifically with the selection of
    "mandatory-to-implement" algorithms.  The algorithms identified in this
-   document as MUST or RECOMMENDED to implement are not known to be broken at
+   document as "MUST" or "RECOMMENDED" to implement are not known to be broken at
    the current time, and cryptographic research so far leads us to believe that
    they are likely to remain adequately secure unless significant and
    unexpected discovery is made. However, this isn't necessarily forever, and
@@ -362,8 +365,8 @@ informative:
   These values must be populated using values from Table 2 of this
   document.
 
-  Additionally, the registration policy for the [DNSKEY-IANA] registry must
-  match the text describing the requirements in Section 2 of this document.
+  Additionally, the registration policy for the [DNSKEY-IANA] registry
+  should match the text describing the requirements in this document.
 
 ## Update to the "Digest Algorithms" registry
 
@@ -384,8 +387,8 @@ informative:
   * Mark values 253 and 254 as "Reserved for Private Use"
   * Delete the (now superfluous) column "Status" from the registry
 
-  Additionally, the registration policy for the [DS-IANA] registry must match
-  the text in describing the requirements in Section 2 of this document.
+  Additionally, the registration policy for the [DS-IANA] registry
+  should match the text describing the requirements in this document.
 
 #  Acknowledgments
 
