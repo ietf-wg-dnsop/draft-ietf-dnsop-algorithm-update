@@ -1,8 +1,8 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-06
-category: info
+docname: draft-ietf-dnsop-rfc8624-bis-07
+category: std
 ipr: trust200902
 stream: IETF
 updates: 8624
@@ -407,6 +407,10 @@ informative:
 --- back
 
 # ChangeLog
+
+## Changes from ietf-06 to ietf-07
+
+    * changed to a standards track document
 
 ## Changes from ietf-05 to ietf-06
 
