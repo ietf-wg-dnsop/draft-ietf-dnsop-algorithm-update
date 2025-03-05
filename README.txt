@@ -5,12 +5,12 @@
 Network Working Group                                        W. Hardaker
 Internet-Draft                                                   USC/ISI
 Updates: 8624 (if approved)                                    W. Kumari
-Intended status: Informational                                    Google
-Expires: 22 August 2025                                 18 February 2025
+Intended status: Standards Track                                  Google
+Expires: 4 September 2025                                   3 March 2025
 
 
       DNSSEC Cryptographic Algorithm Recommendation Update Process
-                    draft-ietf-dnsop-rfc8624-bis-06
+                    draft-ietf-dnsop-rfc8624-bis-07
 
 Abstract
 
@@ -46,16 +46,16 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 August 2025.
+   This Internet-Draft will expire on 4 September 2025.
 
 
 
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 1]
+Hardaker & Kumari       Expires 4 September 2025                [Page 1]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 Copyright Notice
@@ -94,24 +94,24 @@ Table of Contents
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .  10
      9.2.  Informative References  . . . . . . . . . . . . . . . . .  11
    Appendix A.  ChangeLog  . . . . . . . . . . . . . . . . . . . . .  12
-     A.1.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  12
-     A.2.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  12
-     A.3.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  13
-     A.4.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  13
-     A.5.  Changes from ietf-00 to ietf-01 . . . . . . . . . . . . .  13
-     A.6.  Changes from hardaker-04 to ietf-00 . . . . . . . . . . .  13
-     A.7.  Changes from -03 to -04 . . . . . . . . . . . . . . . . .  13
-     A.8.  Changes since RFC8624 . . . . . . . . . . . . . . . . . .  13
+     A.1.  Changes from ietf-06 to ietf-07 . . . . . . . . . . . . .  12
+     A.2.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  12
+     A.3.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  12
+     A.4.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  13
+     A.5.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  13
+     A.6.  Changes from ietf-00 to ietf-01 . . . . . . . . . . . . .  13
+     A.7.  Changes from hardaker-04 to ietf-00 . . . . . . . . . . .  13
+     A.8.  Changes from -03 to -04 . . . . . . . . . . . . . . . . .  13
+     A.9.  Changes since RFC8624 . . . . . . . . . . . . . . . . . .  13
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  13
 
 
 
 
 
-
-Hardaker & Kumari        Expires 22 August 2025                 [Page 2]
+Hardaker & Kumari       Expires 4 September 2025                [Page 2]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 1.  Introduction
@@ -165,9 +165,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 3]
+Hardaker & Kumari       Expires 4 September 2025                [Page 3]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    The perspective of implementers may differ from that of an operator
@@ -221,9 +221,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 4]
+Hardaker & Kumari       Expires 4 September 2025                [Page 4]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 1.3.  Requirements notation
@@ -277,9 +277,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 5]
+Hardaker & Kumari       Expires 4 September 2025                [Page 5]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    Adding a new entry to the "DNS System Algorithm Numbers" registry
@@ -333,9 +333,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 6]
+Hardaker & Kumari       Expires 4 September 2025                [Page 6]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    When there are multiple RECOMMENDED algorithms in the "use" column,
@@ -389,9 +389,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 7]
+Hardaker & Kumari       Expires 4 September 2025                [Page 7]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    +======+==========+===========+===========+==========+=============+
@@ -445,9 +445,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 8]
+Hardaker & Kumari       Expires 4 September 2025                [Page 8]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    Retiring an algorithm too soon would result in a zone signed with the
@@ -501,9 +501,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                 [Page 9]
+Hardaker & Kumari       Expires 4 September 2025                [Page 9]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    *  "Use for DNSSEC Validation"
@@ -557,9 +557,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                [Page 10]
+Hardaker & Kumari       Expires 4 September 2025               [Page 10]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
@@ -613,9 +613,9 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                [Page 11]
+Hardaker & Kumari       Expires 4 September 2025               [Page 11]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
    [RFC6605]  Hoffman, P. and W.C.A. Wijngaards, "Elliptic Curve Digital
@@ -649,11 +649,15 @@ Internet-Draft      DNSSEC Algorithms Update Process       February 2025
 
 Appendix A.  ChangeLog
 
-A.1.  Changes from ietf-05 to ietf-06
+A.1.  Changes from ietf-06 to ietf-07
+
+   * changed to a standards track document
+
+A.2.  Changes from ietf-05 to ietf-06
 
    * Address Eric Vyncke (RAD!) AD review comments.
 
-A.2.  Changes from ietf-03 to ietf-05
+A.3.  Changes from ietf-03 to ietf-05
 
 * Updated "entry requirements" to be "Specification Required".
 * Marked values 128 - 252 as "Reserved" in "Digest Algorithms" as
@@ -665,43 +669,39 @@ Algorithms"
 
 
 
-
-
-
-
-Hardaker & Kumari        Expires 22 August 2025                [Page 12]
+Hardaker & Kumari       Expires 4 September 2025               [Page 12]
 
-Internet-Draft      DNSSEC Algorithms Update Process       February 2025
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
-A.3.  Changes from ietf-02 to ietf-03
+A.4.  Changes from ietf-02 to ietf-03
 
    *  Fixed the reference in the Abstract (no links in Abstracts)
 
    *  Added Updates: to the header.
 
-A.4.  Changes from ietf-01 to ietf-02
+A.5.  Changes from ietf-01 to ietf-02
 
    *  Changed the MUST values in the tables for the Use columns to
       RECOMMENDED based on discussions no the dnsop mailing list.
 
    *  Other minor wording and formatting changes
 
-A.5.  Changes from ietf-00 to ietf-01
+A.6.  Changes from ietf-00 to ietf-01
 
    *  Only NIT fixing
 
-A.6.  Changes from hardaker-04 to ietf-00
+A.7.  Changes from hardaker-04 to ietf-00
 
    *  Just a draft name and number change.
 
-A.7.  Changes from -03 to -04
+A.8.  Changes from -03 to -04
 
    *  Changed the columns being added from 2 per table to 4, based on
       discussion within the dnsop working group mailing list.  This was
       a fairly major set of changes.
 
-A.8.  Changes since RFC8624
+A.9.  Changes since RFC8624
 
    *  The primary purpose of this revision is to introduce the new
       columns to existing registries.  It makes no changes to the
@@ -725,4 +725,4 @@ Authors' Addresses
 
 
 
-Hardaker & Kumari        Expires 22 August 2025                [Page 13]
+Hardaker & Kumari       Expires 4 September 2025               [Page 13]
