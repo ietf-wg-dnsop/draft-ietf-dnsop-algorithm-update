@@ -233,11 +233,12 @@ informative:
    applicability, or is intended only for specific use cases.
 
    The following sections state the initial values to be populated
-   into these rows, with Implementation values transcribed from
-   [RFC8624].  Use for columns was also set to the same values from
-   [RFC8624], as there is no existing documented values and general
-   interpretation of the registries to date indicate they should be the
-   same, although may differ in the future.
+   into these rows. The "Implement for" column values are transcribed
+   from [RFC8624].  The "Use for" columns were also set to the same
+   values since the general interpretation to date indicates they have
+   been treated as values for both "implementation" and "use".  We
+   note that the values for "Implement for" and "Use for" may diverge
+   in the future.
 
 #  DNS System Algorithm Numbers Column Values
 
