@@ -196,6 +196,7 @@ informative:
    |-----------------------------------|----------------------------------|
    | Digest Algorithm                  | Implement for DNSSSEC Validation |
    |-----------------------------------|----------------------------------|
+{: #columns title="Columns to add to existing DNSSEC algorithm registries"}
 
    Adding a new entry to the "DNS System Algorithm Numbers" registry
    with a recommended value of "MAY" in the "Use for DNSSSEC Signing",
@@ -278,7 +279,7 @@ informative:
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | 16 | ED448               | MAY                    | RECOMMENDED               | MAY                          | RECOMMENDED                     |
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
-
+{: #algtable title="Initial values for the DNS System Algorithm Numbers columns"}
 
 #  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms Column Values
 
@@ -307,7 +308,7 @@ informative:
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
    | 6      | SM3               | MAY                       | MAY                       | MAY                             | MAY                             |
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
-
+{: #dstable title="Initial values for the  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms columns"} 
 
 #  Security Considerations
 
