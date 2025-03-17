@@ -203,7 +203,7 @@ informative:
    "Implement for DNSSSEC Validation" columns SHALL follow the
    "Specification Required" policy as defined in [RFC8126] in order to
    promote continued evolution of DNSSEC algorithms and DNSSEC
-   agility.  New entries add through the "Specification Required"
+   agility.  New entries added through the "Specification Required"
    process will have the value of "MAY" for all columns. (Ed note (RFC
    Editor - please delete this before publication): As a reminder: the
    "Specification Required" policy includes a requirement for a
@@ -394,7 +394,7 @@ informative:
 #  Acknowledgments
 
   This document is based on, and extends, RFC 8624, which was authored by Paul
-  Wouters, and Ondrej Sury.
+  Wouters and Ondrej Sury.
 
   The content of this document was heavily discussed by participants of the
   DNSOP working group.  The authors appreciate the thoughtfulness of the many
@@ -408,6 +408,8 @@ informative:
 --- back
 
 # ChangeLog
+
+(RFC Editor: please remove this ChangeLog section upon publication.)
 
 ## Changes from ietf-07 to ietf-08
 
@@ -442,7 +444,7 @@ informative:
 ## Changes from ietf-01 to ietf-02
 
    * Changed the MUST values in the tables for the Use columns to
-     RECOMMENDED based on discussions no the dnsop mailing list.
+     RECOMMENDED based on discussions on the dnsop mailing list.
 
    * Other minor wording and formatting changes
 
