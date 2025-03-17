@@ -81,7 +81,7 @@ informative:
    defined by various RFCs, including [RFC4034], [RFC4509], [RFC5155],
    [RFC5702], [RFC5933], [RFC6605], [RFC8080].
 
-   To ensure interoperability, a set of "mandatory-to-implement"
+   To ensure interoperability, a set of "mandatory to implement"
    DNSKEY algorithms are defined in [RFC8624].  To make the current
    status of the algorithms more easily accessible and understandable,
    and to make future changes to these recommendations easier to
@@ -126,13 +126,13 @@ informative:
 ##  Updating Algorithm Requirement Levels
 
    By the time a DNSSEC cryptographic algorithm is made
-   mandatory-to-implement, it should already be available in most
+   mandatory to implement, it should already be available in most
    implementations.  This document defines an IANA registration
    modification to allow future documents to specify the
    implementation recommendations for each algorithm, as the
    recommendation status of each DNSSEC cryptographic algorithm is
    expected to change over time.  For example, there is no guarantee
-   that newly introduced algorithms will become mandatory-to-implement
+   that newly introduced algorithms will become mandatory to implement
    in the future.  Likewise, published algorithms are continuously
    subjected to cryptographic attack and may become too weak, or even
    be completely broken, and will require deprecation in the future.
@@ -143,7 +143,7 @@ informative:
    there are strong security reasons, an algorithm is expected to be
    downgraded from MUST to NOT RECOMMENDED or MAY, instead of directly
    from MUST to MUST NOT.  Similarly, an algorithm that has not been
-   mentioned as mandatory-to-implement is expected to be first introduced
+   mentioned as mandatory to implement is expected to be first introduced
    as RECOMMENDED instead of a MUST.
 
    Since the effect of using an unknown DNSKEY algorithm is that the zone is
@@ -322,7 +322,7 @@ informative:
 
    This document concerns itself with the selection of cryptographic algorithms
    for the use of DNSSEC, specifically with the selection of
-   "mandatory-to-implement" algorithms.  The algorithms identified in this
+   "mandatory to implement" algorithms.  The algorithms identified in this
    document as "MUST" or "RECOMMENDED" to implement are not known to be broken at
    the current time, and cryptographic research so far leads us to believe that
    they are likely to remain adequately secure unless significant and
