@@ -215,11 +215,11 @@ informative:
    DNSSSEC Signing", or "Implement for DNSSSEC Validation" columns to
    any other value than "MAY" requires a Standards Action.
 
-   Adding a new entry to the "Digest Algorithms" registry with a recommended
-   value of "MAY" in the "Use for DNSSSEC Delegation", "Use for DNSSSEC
-   Validation", "Implement for DNSSSEC Delegation", or "Implement for DNSSSEC
-   Validation" columns is via the "Specification Required" policy as defined in
-   [RFC8126].
+   Adding a new entry to the "Digest Algorithms" registry with a
+   recommended value of "MAY" in the "Use for DNSSSEC Delegation",
+   "Use for DNSSSEC Validation", "Implement for DNSSSEC Delegation",
+   or "Implement for DNSSSEC Validation" columns SHALL follow the
+   "Specification Required" policy as defined in [RFC8126].
 
    Adding a new entry to, or changing existing values in,
    the "DNS System Algorithm Numbers" registry for the "Use for
