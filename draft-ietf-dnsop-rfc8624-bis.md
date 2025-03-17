@@ -408,6 +408,13 @@ informative:
 
 # ChangeLog
 
+## Changes from ietf-07 to ietf-08
+
+    * Handle issues raised during IETF last call:
+        * updates 9157
+        * other nit fixes
+    
+
 ## Changes from ietf-06 to ietf-07
 
     * changed to a standards track document
