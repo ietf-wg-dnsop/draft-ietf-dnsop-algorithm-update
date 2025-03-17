@@ -397,12 +397,14 @@ informative:
   This document is based on, and extends, RFC 8624, which was authored by Paul
   Wouters and Ondrej Sury.
 
-  The content of this document was heavily discussed by participants of the
-  DNSOP working group.  The authors appreciate the thoughtfulness of the many
-  opinions expressed by working group participants that all helped shaped this
-  document. We thank Paul Hoffman and Paul Wouters for their contributed text,
-  and also Shumon Huque, S Moonesamy, Peter Thomassen, Paul Wouters, Stefan
-  Ubbink, and Loganaden Velvindron for their reviews and comments.
+  The content of this document was heavily discussed by participants
+  of the DNSOP working group.  The authors appreciate the
+  thoughtfulness of the many opinions expressed by working group
+  participants that all helped shaped this document. We thank Paul
+  Hoffman and Paul Wouters for their contributed text, and also Shumon
+  Huque, Nicolai Leymann, S Moonesamy, Magnus Nyström, Peter
+  Thomassen, Paul Wouters, Stefan Ubbink, and Loganaden Velvindron for
+  their reviews and comments.
 
 
 
