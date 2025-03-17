@@ -330,10 +330,10 @@ informative:
    it is expected that future documents will be issued from time to time to
    reflect the current best practices in this area.
 
-   Retiring an algorithm too soon would result in a zone signed with the
-   retired algorithm being downgraded to the equivalent of an unsigned
-   zone.  Therefore, algorithm deprecation must be done very slowly and
-   only after careful consideration and measurement of its use.
+   Retiring an algorithm too soon would result in a zone signed with
+   the retired algorithm being downgraded to the equivalent of an
+   unsigned zone.  Therefore, algorithm deprecation must be done only
+   after careful consideration and ideally slowly when possible.
 
 #  Operational Considerations
 
