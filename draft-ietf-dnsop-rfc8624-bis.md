@@ -180,13 +180,13 @@ informative:
    |-----------------------------------|----------------------------------|
    | Registry                          | Column added                     |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Use for DNSSSEC Signing          |
+   | DNS Security Algorithm Numbers    | Use for DNSSSEC Signing          |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Use for DNSSSEC Validation       |
+   | DNS Security Algorithm Numbers    | Use for DNSSSEC Validation       |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Implement for DNSSSEC Signing    |
+   | DNS Security Algorithm Numbers    | Implement for DNSSSEC Signing    |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Implement for DNSSSEC Validation |
+   | DNS Security Algorithm Numbers    | Implement for DNSSSEC Validation |
    |-----------------------------------|----------------------------------|
    | Digest Algorithm                  | Use for DNSSSEC Delegation       |
    |-----------------------------------|----------------------------------|
