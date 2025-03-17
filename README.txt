@@ -4,9 +4,9 @@
 
 Network Working Group                                        W. Hardaker
 Internet-Draft                                                   USC/ISI
-Updates: 8624 (if approved)                                    W. Kumari
+Updates: 86249157 (if approved)                                W. Kumari
 Intended status: Standards Track                                  Google
-Expires: 4 September 2025                                   3 March 2025
+Expires: 17 September 2025                                 16 March 2025
 
 
       DNSSEC Cryptographic Algorithm Recommendation Update Process
@@ -25,7 +25,8 @@ Abstract
    RFC8624 to an IANA registry.  This is done both to allow the list to
    be more easily updated, and to allow the list to be more easily
    referenced.  Future extensions to this registry can be made under
-   new, incremental update RFCs.
+   new, incremental update RFCs.  This document also incorporates the
+   revised IANA DNSSEC considerations from [RFC9157].
 
    The document does not change the status (MUST, MAY, RECOMMENDED, etc)
    of any of the algorithms listed in RFC8624; that is the work of
@@ -46,14 +47,13 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 September 2025.
+   This Internet-Draft will expire on 17 September 2025.
 
 
 
 
 
-
-Hardaker & Kumari       Expires 4 September 2025                [Page 1]
+Hardaker & Kumari       Expires 17 September 2025               [Page 1]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -68,9 +68,9 @@ Copyright Notice
    license-info) in effect on the date of publication of this document.
    Please review these documents carefully, as they describe your rights
    and restrictions with respect to this document.  Code Components
-   extracted from this document must include Revised BSD License text as
-   described in Section 4.e of the Trust Legal Provisions and are
-   provided without warranty as described in the Revised BSD License.
+   extracted from this document must include Simplified BSD License text
+   as described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Simplified BSD License.
 
 Table of Contents
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 2]
+Hardaker & Kumari       Expires 17 September 2025               [Page 2]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -165,7 +165,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 3]
+Hardaker & Kumari       Expires 17 September 2025               [Page 3]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -221,7 +221,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 4]
+Hardaker & Kumari       Expires 17 September 2025               [Page 4]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -277,7 +277,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 5]
+Hardaker & Kumari       Expires 17 September 2025               [Page 5]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -333,7 +333,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 6]
+Hardaker & Kumari       Expires 17 September 2025               [Page 6]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -341,40 +341,40 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
    When there are multiple RECOMMENDED algorithms in the "use" column,
    operators should choose the best algorithm according to local policy.
 
-   +==+===============+===========+===========+===========+===========+
-   |N |Mnemonics      |Use for    |Use for    |Implement  |Implement  |
-   |  |               |DNSSEC     |DNSSEC     |for DNSSEC |for DNSSEC |
-   |  |               |Signing    |Validation |Signing    |Validation |
-   +==+===============+===========+===========+===========+===========+
-   |1 |RSAMD5         |MUST NOT   |MUST NOT   |MUST NOT   |MUST NOT   |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |3 |DSA            |MUST NOT   |MUST NOT   |MUST NOT   |MUST NOT   |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |5 |RSASHA1        |NOT        |RECOMMENDED|NOT        |MUST       |
-   |  |               |RECOMMENDED|           |RECOMMENDED|           |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |6 |DSA-NSEC3-SHA1 |MUST NOT   |MUST NOT   |MUST NOT   |MUST NOT   |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |7 |RSASHA1-NSEC3- |NOT        |RECOMMENDED|NOT        |MUST       |
-   |  |SHA1           |RECOMMENDED|           |RECOMMENDED|           |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |8 |RSASHA256      |RECOMMENDED|RECOMMENDED|MUST       |MUST       |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |10|RSASHA512      |NOT        |RECOMMENDED|NOT        |MUST       |
-   |  |               |RECOMMENDED|           |RECOMMENDED|           |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |12|ECC-GOST       |MUST NOT   |MAY        |MUST NOT   |MAY        |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |13|ECDSAP256SHA256|RECOMMENDED|RECOMMENDED|MUST       |MUST       |
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |14|ECDSAP384SHA384|MAY        |RECOMMENDED|MAY        |RECOMMENDED|
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |15|ED25519        |RECOMMENDED|RECOMMENDED|RECOMMENDED|RECOMMENDED|
-   +--+---------------+-----------+-----------+-----------+-----------+
-   |16|ED448          |MAY        |RECOMMENDED|MAY        |RECOMMENDED|
-   +--+---------------+-----------+-----------+-----------+-----------+
+   +==+================+===========+===========+===========+===========+
+   |N |Mnemonics       |Use for    |Use for    |Implement  |Implement  |
+   |  |                |DNSSEC     |DNSSEC     |for DNSSEC |for DNSSEC |
+   |  |                |Signing    |Validation |Signing    |Validation |
+   +==+================+===========+===========+===========+===========+
+   |1 |RSAMD5          |MUST NOT   |MUST NOT   |MUST NOT   |MUST NOT   |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |3 |DSA             |MUST NOT   |MUST NOT   |MUST NOT   |MUST NOT   |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |5 |RSASHA1         |NOT        |RECOMMENDED|NOT        |MUST       |
+   |  |                |RECOMMENDED|           |RECOMMENDED|           |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |6 |DSA-NSEC3-SHA1  |MUST NOT   |MUST NOT   |MUST NOT   |MUST NOT   |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |7 |RSASHA1-NSEC3-  |NOT        |RECOMMENDED|NOT        |MUST       |
+   |  |SHA1            |RECOMMENDED|           |RECOMMENDED|           |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |8 |RSASHA256       |RECOMMENDED|RECOMMENDED|MUST       |MUST       |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |10|RSASHA512       |NOT        |RECOMMENDED|NOT        |MUST       |
+   |  |                |RECOMMENDED|           |RECOMMENDED|           |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |12|ECC-GOST        |MUST NOT   |MAY        |MUST NOT   |MAY        |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |13|ECDSAP256SHA256 |RECOMMENDED|RECOMMENDED|MUST       |MUST       |
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |14|ECDSAP384SHA384 |MAY        |RECOMMENDED|MAY        |RECOMMENDED|
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |15|ED25519         |RECOMMENDED|RECOMMENDED|RECOMMENDED|RECOMMENDED|
+   +--+----------------+-----------+-----------+-----------+-----------+
+   |16|ED448           |MAY        |RECOMMENDED|MAY        |RECOMMENDED|
+   +--+----------------+-----------+-----------+-----------+-----------+
 
-                                 Table 2
+                                  Table 2
 
 4.  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest
     Algorithms Column Values
@@ -389,35 +389,35 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 7]
+Hardaker & Kumari       Expires 17 September 2025               [Page 7]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
-   +======+==========+===========+===========+==========+=============+
-   |Number|Mnemonics |Use for    |Use for    |Implement | Implement   |
-   |      |          |DNSSEC     |DNSSEC     |for DNSSEC| for DNSSEC  |
-   |      |          |Delegation |Validation |Delegation| Validation  |
-   +======+==========+===========+===========+==========+=============+
-   |0     |NULL (CDS |MUST NOT   |MUST NOT   |MUST NOT  | MUST NOT    |
-   |      |only)     |[*]        |[*]        |[*]       | [*]         |
-   +------+----------+-----------+-----------+----------+-------------+
-   |1     |SHA-1     |MUST NOT   |RECOMMENDED|MUST NOT  | MUST        |
-   +------+----------+-----------+-----------+----------+-------------+
-   |2     |SHA-256   |RECOMMENDED|RECOMMENDED|MUST      | MUST        |
-   +------+----------+-----------+-----------+----------+-------------+
-   |3     |GOST R    |MUST NOT   |MAY        |MUST NOT  | MAY         |
-   |      |34.11-94  |           |           |          |             |
-   +------+----------+-----------+-----------+----------+-------------+
-   |4     |SHA-384   |MAY        |RECOMMENDED|MAY       | RECOMMENDED |
-   +------+----------+-----------+-----------+----------+-------------+
-   |5     |GOST R    |MAY        |MAY        |MAY       | MAY         |
-   |      |34.11-2012|           |           |          |             |
-   +------+----------+-----------+-----------+----------+-------------+
-   |6     |SM3       |MAY        |MAY        |MAY       | MAY         |
-   +------+----------+-----------+-----------+----------+-------------+
+   +======+==========+===========+============+==========+=============+
+   |Number|Mnemonics |Use for    |Use for     |Implement |Implement for|
+   |      |          |DNSSEC     |DNSSEC      |for DNSSEC|DNSSEC       |
+   |      |          |Delegation |Validation  |Delegation|Validation   |
+   +======+==========+===========+============+==========+=============+
+   |0     |NULL (CDS |MUST NOT   |MUST NOT [*]|MUST NOT  |MUST NOT [*] |
+   |      |only)     |[*]        |            |[*]       |             |
+   +------+----------+-----------+------------+----------+-------------+
+   |1     |SHA-1     |MUST NOT   |RECOMMENDED |MUST NOT  |MUST         |
+   +------+----------+-----------+------------+----------+-------------+
+   |2     |SHA-256   |RECOMMENDED|RECOMMENDED |MUST      |MUST         |
+   +------+----------+-----------+------------+----------+-------------+
+   |3     |GOST R    |MUST NOT   |MAY         |MUST NOT  |MAY          |
+   |      |34.11-94  |           |            |          |             |
+   +------+----------+-----------+------------+----------+-------------+
+   |4     |SHA-384   |MAY        |RECOMMENDED |MAY       |RECOMMENDED  |
+   +------+----------+-----------+------------+----------+-------------+
+   |5     |GOST R    |MAY        |MAY         |MAY       |MAY          |
+   |      |34.11-2012|           |            |          |             |
+   +------+----------+-----------+------------+----------+-------------+
+   |6     |SM3       |MAY        |MAY         |MAY       |MAY          |
+   +------+----------+-----------+------------+----------+-------------+
 
-                                 Table 3
+                                  Table 3
 
 5.  Security Considerations
 
@@ -445,7 +445,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 8]
+Hardaker & Kumari       Expires 17 September 2025               [Page 8]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -501,7 +501,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025                [Page 9]
+Hardaker & Kumari       Expires 17 September 2025               [Page 9]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -557,7 +557,7 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
 
 
-Hardaker & Kumari       Expires 4 September 2025               [Page 10]
+Hardaker & Kumari       Expires 17 September 2025              [Page 10]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
@@ -581,6 +581,10 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
               DOI 10.17487/RFC8624, June 2019,
               <https://www.rfc-editor.org/rfc/rfc8624>.
 
+   [RFC9157]  Hoffman, P., "Revised IANA Considerations for DNSSEC",
+              RFC 9157, DOI 10.17487/RFC9157, December 2021,
+              <https://www.rfc-editor.org/rfc/rfc9157>.
+
 9.2.  Informative References
 
    [RFC4034]  Arends, R., Austein, R., Larson, M., Massey, D., and S.
@@ -603,20 +607,21 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
               DOI 10.17487/RFC5702, October 2009,
               <https://www.rfc-editor.org/rfc/rfc5702>.
 
+
+
+
+
+
+
+Hardaker & Kumari       Expires 17 September 2025              [Page 11]
+
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
+
+
    [RFC5933]  Dolmatov, V., Ed., Chuprina, A., and I. Ustinov, "Use of
               GOST Signature Algorithms in DNSKEY and RRSIG Resource
               Records for DNSSEC", RFC 5933, DOI 10.17487/RFC5933, July
               2010, <https://www.rfc-editor.org/rfc/rfc5933>.
-
-
-
-
-
-
-Hardaker & Kumari       Expires 4 September 2025               [Page 11]
-
-Internet-Draft      DNSSEC Algorithms Update Process          March 2025
-
 
    [RFC6605]  Hoffman, P. and W.C.A. Wijngaards, "Elliptic Curve Digital
               Signature Algorithm (DSA) for DNSSEC", RFC 6605,
@@ -659,6 +664,16 @@ A.2.  Changes from ietf-05 to ietf-06
 
 A.3.  Changes from ietf-03 to ietf-05
 
+
+
+
+
+
+Hardaker & Kumari       Expires 17 September 2025              [Page 12]
+
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
+
+
 * Updated "entry requirements" to be "Specification Required".
 * Marked values 128 - 252 as "Reserved" in "Digest Algorithms" as
 break-glass mechanism in case we get a flood of these. To align with the
@@ -666,13 +681,6 @@ break-glass mechanism in case we get a flood of these. To align with the
 * Marked values 253 and 254 as "Reserved for Private Use" in "Digest
 Algorithms"
 * Deleted the (now superfluous) column "Status" from the "Digest
-
-
-
-Hardaker & Kumari       Expires 4 September 2025               [Page 12]
-
-Internet-Draft      DNSSEC Algorithms Update Process          March 2025
-
 
 A.4.  Changes from ietf-02 to ietf-03
 
@@ -713,16 +721,64 @@ A.9.  Changes since RFC8624
 
 Authors' Addresses
 
+
+
+
+
+Hardaker & Kumari       Expires 17 September 2025              [Page 13]
+
+Internet-Draft      DNSSEC Algorithms Update Process          March 2025
+
+
    Wes Hardaker
    USC/ISI
+
    Email: ietf@hardakers.net
 
 
    Warren Kumari
    Google
+
    Email: warren@kumari.net
 
 
 
 
-Hardaker & Kumari       Expires 4 September 2025               [Page 13]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hardaker & Kumari       Expires 17 September 2025              [Page 14]

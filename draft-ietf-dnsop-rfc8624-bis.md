@@ -5,7 +5,7 @@ docname: draft-ietf-dnsop-rfc8624-bis-07
 category: std
 ipr: trust200902
 stream: IETF
-updates: 8624
+updates: 8624, 9157
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, docmapping]
@@ -27,6 +27,7 @@ normative:
   RFC8126:
   RFC8174:
   RFC8624:
+  RFC9157:
   DNSKEY-IANA:
     author:
       name: IANA
@@ -67,7 +68,8 @@ informative:
    for DNSSEC from RFC8624 to an IANA registry. This is done both to allow
    the list to be more easily updated, and to allow the list to be more easily
    referenced. Future extensions to this registry can be made under new,
-   incremental update RFCs.
+   incremental update RFCs.  This document also incorporates the revised 
+   IANA DNSSEC considerations from [RFC9157].
 
    The document does not change the status (MUST, MAY, RECOMMENDED, etc) of any
    of the algorithms listed in RFC8624; that is the work of future documents.
