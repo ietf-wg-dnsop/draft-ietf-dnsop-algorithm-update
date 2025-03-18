@@ -235,11 +235,11 @@ informative:
 
    The following sections state the initial values to be populated
    into these rows. The "Implement for" column values are transcribed
-   from [RFC8624].  The "Use for" columns were also set to the same
-   values since the general interpretation to date indicates they have
-   been treated as values for both "implementation" and "use".  We
-   note that the values for "Implement for" and "Use for" may diverge
-   in the future.
+   from [RFC8624]. The "Use for" columns are set to the same values
+   as the "implement for" values since the general interpretation to
+   date indicates they have been treated as values for both
+   "implementation" and "use". We note that the values for "Implement
+   for" and "Use for" may diverge in the future
 
 #  DNS System Algorithm Numbers Column Values
 
