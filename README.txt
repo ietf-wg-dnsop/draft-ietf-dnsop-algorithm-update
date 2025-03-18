@@ -4,7 +4,7 @@
 
 Network Working Group                                        W. Hardaker
 Internet-Draft                                                   USC/ISI
-Updates: 8624 (if approved)                                    W. Kumari
+Updates: 8624, 9157 (if approved)                              W. Kumari
 Intended status: Standards Track                                  Google
 Expires: 19 September 2025                                 18 March 2025
 
@@ -25,7 +25,8 @@ Abstract
    RFC8624 to an IANA registry.  This is done both to allow the list to
    be more easily updated, and to allow the list to be more easily
    referenced.  Future extensions to this registry can be made under
-   new, incremental update RFCs.
+   new, incremental update RFCs.  This document also incorporates the
+   revised IANA DNSSEC considerations from [RFC9157].
 
    The document does not change the status (MUST, MAY, RECOMMENDED, etc)
    of any of the algorithms listed in RFC8624; that is the work of
@@ -47,7 +48,6 @@ Status of This Memo
    material or to cite them other than as "work in progress."
 
    This Internet-Draft will expire on 19 September 2025.
-
 
 
 
@@ -96,7 +96,7 @@ Table of Contents
    Appendix A.  ChangeLog  . . . . . . . . . . . . . . . . . . . . .  12
      A.1.  Changes from ietf-07 to ietf-08 . . . . . . . . . . . . .  12
      A.2.  Changes from ietf-06 to ietf-07 . . . . . . . . . . . . .  12
-     A.3.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  12
+     A.3.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  13
      A.4.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  13
      A.5.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  13
      A.6.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  13
@@ -581,6 +581,10 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
               DOI 10.17487/RFC8624, June 2019,
               <https://www.rfc-editor.org/rfc/rfc8624>.
 
+   [RFC9157]  Hoffman, P., "Revised IANA Considerations for DNSSEC",
+              RFC 9157, DOI 10.17487/RFC9157, December 2021,
+              <https://www.rfc-editor.org/rfc/rfc9157>.
+
 9.2.  Informative References
 
    [RFC4034]  Arends, R., Austein, R., Larson, M., Massey, D., and S.
@@ -603,10 +607,6 @@ Internet-Draft      DNSSEC Algorithms Update Process          March 2025
               DOI 10.17487/RFC5702, October 2009,
               <https://www.rfc-editor.org/rfc/rfc5702>.
 
-   [RFC5933]  Dolmatov, V., Ed., Chuprina, A., and I. Ustinov, "Use of
-              GOST Signature Algorithms in DNSKEY and RRSIG Resource
-              Records for DNSSEC", RFC 5933, DOI 10.17487/RFC5933, July
-              2010, <https://www.rfc-editor.org/rfc/rfc5933>.
 
 
 
@@ -617,6 +617,11 @@ Hardaker & Kumari       Expires 19 September 2025              [Page 11]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
+
+   [RFC5933]  Dolmatov, V., Ed., Chuprina, A., and I. Ustinov, "Use of
+              GOST Signature Algorithms in DNSKEY and RRSIG Resource
+              Records for DNSSEC", RFC 5933, DOI 10.17487/RFC5933, July
+              2010, <https://www.rfc-editor.org/rfc/rfc5933>.
 
    [RFC6605]  Hoffman, P. and W.C.A. Wijngaards, "Elliptic Curve Digital
               Signature Algorithm (DSA) for DNSSEC", RFC 6605,
@@ -661,11 +666,6 @@ A.2.  Changes from ietf-06 to ietf-07
 
    * changed to a standards track document
 
-A.3.  Changes from ietf-05 to ietf-06
-
-   * Address Eric Vyncke (RAD!) AD review comments.
-
-
 
 
 
@@ -673,6 +673,10 @@ Hardaker & Kumari       Expires 19 September 2025              [Page 12]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
+
+A.3.  Changes from ietf-05 to ietf-06
+
+   * Address Eric Vyncke (RAD!) AD review comments.
 
 A.4.  Changes from ietf-03 to ietf-05
 
@@ -719,16 +723,14 @@ A.10.  Changes since RFC8624
 
    *  Merged in RFC9157 updates.
 
-   *  Set authors as Wes Hardaker, Warren Kumari.
-
-
-
 
 
 Hardaker & Kumari       Expires 19 September 2025              [Page 13]
 
 Internet-Draft      DNSSEC Algorithms Update Process          March 2025
 
+
+   *  Set authors as Wes Hardaker, Warren Kumari.
 
 Authors' Addresses
 
@@ -742,8 +744,6 @@ Authors' Addresses
    Google
 
    Email: warren@kumari.net
-
-
 
 
 
