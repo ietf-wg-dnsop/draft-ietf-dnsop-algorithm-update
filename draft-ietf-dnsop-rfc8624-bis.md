@@ -68,7 +68,7 @@ informative:
    for DNSSEC from RFC8624 to an IANA registry. This is done both to allow
    the list to be more easily updated, and to allow the list to be more easily
    referenced. Future extensions to this registry can be made under new,
-   incremental update RFCs.  This document also incorporates the revised 
+   incremental update RFCs.  This document also incorporates the revised
    IANA DNSSEC considerations from [RFC9157].
 
    The document does not change the status (MUST, MAY, RECOMMENDED, etc) of any
@@ -281,6 +281,10 @@ informative:
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | 16 | ED448               | MAY                    | RECOMMENDED               | MAY                          | RECOMMENDED                     |
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
+   | 17 | SM2 signing algorithm with SM3 hashing algorithm | SM2SM3 | MAY | MAY    | MAY                          | MAY                             |
+   |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
+   | 23 | GOST R 34.10-2012   | ECC-GOST12             |                           |                              |                                 |
+   |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
 {: #algtable title="Initial values for the DNS System Algorithm Numbers columns"}
 
 #  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms Column Values
@@ -310,7 +314,7 @@ informative:
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
    | 6      | SM3               | MAY                       | MAY                       | MAY                             | MAY                             |
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
-{: #dstable title="Initial values for the  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms columns"} 
+{: #dstable title="Initial values for the  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms columns"}
 
 #  Security Considerations
 
@@ -421,7 +425,7 @@ informative:
     * Handle issues raised during IETF last call:
         * updates 9157
         * other nit fixes
-    
+
 
 ## Changes from ietf-06 to ietf-07
 
