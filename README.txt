@@ -544,8 +544,8 @@ Internet-Draft      DNSSEC Algorithms Update Process          April 2025
    of the many opinions expressed by working group participants that all
    helped shaped this document.  We thank Paul Hoffman and Paul Wouters
    for their contributed text, and also Shumon Huque, Nicolai Leymann, S
-   Moonesamy, Magnus Nyström, Peter Thomassen, Paul Wouters, Stefan
-   Ubbink, and Loganaden Velvindron for their reviews and comments.
+   Moonesamy, Magnus Nyström, Peter Thomassen, Stefan Ubbink, and
+   Loganaden Velvindron for their reviews and comments.
 
 9.  References
 

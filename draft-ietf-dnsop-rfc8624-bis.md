@@ -1,7 +1,7 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-08
+docname: draft-ietf-dnsop-rfc8624-bis-09
 category: std
 ipr: trust200902
 stream: IETF
@@ -419,6 +419,10 @@ informative:
 # ChangeLog
 
 (RFC Editor: please remove this ChangeLog section upon publication.)
+
+## Changes from ietf-08 to ietf-09
+
+    * Added missing alogirthms (SM2/SM3 and GOST R 34.10-2012)
 
 ## Changes from ietf-07 to ietf-08
 
