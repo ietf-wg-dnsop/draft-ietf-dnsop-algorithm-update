@@ -1,11 +1,11 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-07
+docname: draft-ietf-dnsop-rfc8624-bis-08
 category: std
 ipr: trust200902
 stream: IETF
-updates: 8624
+updates: 8624, 9157
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, docmapping]
@@ -27,6 +27,7 @@ normative:
   RFC8126:
   RFC8174:
   RFC8624:
+  RFC9157:
   DNSKEY-IANA:
     author:
       name: IANA
@@ -67,7 +68,8 @@ informative:
    for DNSSEC from RFC8624 to an IANA registry. This is done both to allow
    the list to be more easily updated, and to allow the list to be more easily
    referenced. Future extensions to this registry can be made under new,
-   incremental update RFCs.
+   incremental update RFCs.  This document also incorporates the revised 
+   IANA DNSSEC considerations from [RFC9157].
 
    The document does not change the status (MUST, MAY, RECOMMENDED, etc) of any
    of the algorithms listed in RFC8624; that is the work of future documents.
@@ -81,7 +83,7 @@ informative:
    defined by various RFCs, including [RFC4034], [RFC4509], [RFC5155],
    [RFC5702], [RFC5933], [RFC6605], [RFC8080].
 
-   To ensure interoperability, a set of "mandatory-to-implement"
+   To ensure interoperability, a set of "mandatory to implement"
    DNSKEY algorithms are defined in [RFC8624].  To make the current
    status of the algorithms more easily accessible and understandable,
    and to make future changes to these recommendations easier to
@@ -126,13 +128,13 @@ informative:
 ##  Updating Algorithm Requirement Levels
 
    By the time a DNSSEC cryptographic algorithm is made
-   mandatory-to-implement, it should already be available in most
+   mandatory to implement, it should already be available in most
    implementations.  This document defines an IANA registration
    modification to allow future documents to specify the
    implementation recommendations for each algorithm, as the
    recommendation status of each DNSSEC cryptographic algorithm is
    expected to change over time.  For example, there is no guarantee
-   that newly introduced algorithms will become mandatory-to-implement
+   that newly introduced algorithms will become mandatory to implement
    in the future.  Likewise, published algorithms are continuously
    subjected to cryptographic attack and may become too weak, or even
    be completely broken, and will require deprecation in the future.
@@ -143,7 +145,7 @@ informative:
    there are strong security reasons, an algorithm is expected to be
    downgraded from MUST to NOT RECOMMENDED or MAY, instead of directly
    from MUST to MUST NOT.  Similarly, an algorithm that has not been
-   mentioned as mandatory-to-implement is expected to be first introduced
+   mentioned as mandatory to implement is expected to be first introduced
    as RECOMMENDED instead of a MUST.
 
    Since the effect of using an unknown DNSKEY algorithm is that the zone is
@@ -180,13 +182,13 @@ informative:
    |-----------------------------------|----------------------------------|
    | Registry                          | Column added                     |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Use for DNSSSEC Signing          |
+   | DNS Security Algorithm Numbers    | Use for DNSSSEC Signing          |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Use for DNSSSEC Validation       |
+   | DNS Security Algorithm Numbers    | Use for DNSSSEC Validation       |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Implement for DNSSSEC Signing    |
+   | DNS Security Algorithm Numbers    | Implement for DNSSSEC Signing    |
    |-----------------------------------|----------------------------------|
-   | Domain Security Algorithm Numbers | Implement for DNSSSEC Validation |
+   | DNS Security Algorithm Numbers    | Implement for DNSSSEC Validation |
    |-----------------------------------|----------------------------------|
    | Digest Algorithm                  | Use for DNSSSEC Delegation       |
    |-----------------------------------|----------------------------------|
@@ -196,14 +198,15 @@ informative:
    |-----------------------------------|----------------------------------|
    | Digest Algorithm                  | Implement for DNSSSEC Validation |
    |-----------------------------------|----------------------------------|
+{: #columns title="Columns to add to existing DNSSEC algorithm registries"}
 
    Adding a new entry to the "DNS System Algorithm Numbers" registry
    with a recommended value of "MAY" in the "Use for DNSSSEC Signing",
    "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
-   "Implement for DNSSSEC Validation" columns is via the
+   "Implement for DNSSSEC Validation" columns SHALL follow the
    "Specification Required" policy as defined in [RFC8126] in order to
    promote continued evolution of DNSSEC algorithms and DNSSEC
-   agility.  New entries add through the "Specification Required"
+   agility.  New entries added through the "Specification Required"
    process will have the value of "MAY" for all columns. (Ed note (RFC
    Editor - please delete this before publication): As a reminder: the
    "Specification Required" policy includes a requirement for a
@@ -215,11 +218,11 @@ informative:
    DNSSSEC Signing", or "Implement for DNSSSEC Validation" columns to
    any other value than "MAY" requires a Standards Action.
 
-   Adding a new entry to the "Digest Algorithms" registry with a recommended
-   value of "MAY" in the "Use for DNSSSEC Delegation", "Use for DNSSSEC
-   Validation", "Implement for DNSSSEC Delegation", or "Implement for DNSSSEC
-   Validation" columns is via the "Specification Required" policy as defined in
-   [RFC8126].
+   Adding a new entry to the "Digest Algorithms" registry with a
+   recommended value of "MAY" in the "Use for DNSSSEC Delegation",
+   "Use for DNSSSEC Validation", "Implement for DNSSSEC Delegation",
+   or "Implement for DNSSSEC Validation" columns SHALL follow the
+   "Specification Required" policy as defined in [RFC8126].
 
    Adding a new entry to, or changing existing values in,
    the "DNS System Algorithm Numbers" registry for the "Use for
@@ -233,11 +236,12 @@ informative:
    applicability, or is intended only for specific use cases.
 
    The following sections state the initial values to be populated
-   into these rows, with Implementation values transcribed from
-   [RFC8624].  Use for columns was also set to the same values from
-   [RFC8624], as there is no existing documented values and general
-   interpretation of the registries to date indicate they should be the
-   same, although may differ in the future.
+   into these rows. The "Implement for" column values are transcribed
+   from [RFC8624]. The "Use for" columns are set to the same values
+   as the "implement for" values since the general interpretation to
+   date indicates they have been treated as values for both
+   "implementation" and "use". We note that the values for "Implement
+   for" and "Use for" may diverge in the future
 
 #  DNS System Algorithm Numbers Column Values
 
@@ -281,7 +285,7 @@ informative:
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | 23 | GOST R 34.10-2012   | MAY                    | MAY                       | MAY                          | MAY                             |
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
-
+{: #algtable title="Initial values for the DNS System Algorithm Numbers columns"}
 
 #  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms Column Values
 
@@ -310,7 +314,7 @@ informative:
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
    | 6      | SM3               | MAY                       | MAY                       | MAY                             | MAY                             |
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
-
+{: #dstable title="Initial values for the  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms columns"} 
 
 #  Security Considerations
 
@@ -326,7 +330,7 @@ informative:
 
    This document concerns itself with the selection of cryptographic algorithms
    for the use of DNSSEC, specifically with the selection of
-   "mandatory-to-implement" algorithms.  The algorithms identified in this
+   "mandatory to implement" algorithms.  The algorithms identified in this
    document as "MUST" or "RECOMMENDED" to implement are not known to be broken at
    the current time, and cryptographic research so far leads us to believe that
    they are likely to remain adequately secure unless significant and
@@ -334,10 +338,10 @@ informative:
    it is expected that future documents will be issued from time to time to
    reflect the current best practices in this area.
 
-   Retiring an algorithm too soon would result in a zone signed with the
-   retired algorithm being downgraded to the equivalent of an unsigned
-   zone.  Therefore, algorithm deprecation must be done very slowly and
-   only after careful consideration and measurement of its use.
+   Retiring an algorithm too soon would result in a zone signed with
+   the retired algorithm being downgraded to the equivalent of an
+   unsigned zone.  Therefore, algorithm deprecation must be done only
+   after careful consideration and ideally slowly when possible.
 
 #  Operational Considerations
 
@@ -397,20 +401,31 @@ informative:
 #  Acknowledgments
 
   This document is based on, and extends, RFC 8624, which was authored by Paul
-  Wouters, and Ondrej Sury.
+  Wouters and Ondrej Sury.
 
-  The content of this document was heavily discussed by participants of the
-  DNSOP working group.  The authors appreciate the thoughtfulness of the many
-  opinions expressed by working group participants that all helped shaped this
-  document. We thank Paul Hoffman and Paul Wouters for their contributed text,
-  and also Shumon Huque, S Moonesamy, Peter Thomassen, Paul Wouters, Stefan
-  Ubbink, and Loganaden Velvindron for their reviews and comments.
+  The content of this document was heavily discussed by participants
+  of the DNSOP working group.  The authors appreciate the
+  thoughtfulness of the many opinions expressed by working group
+  participants that all helped shaped this document. We thank Paul
+  Hoffman and Paul Wouters for their contributed text, and also Shumon
+  Huque, Nicolai Leymann, S Moonesamy, Magnus Nyström, Peter
+  Thomassen, Paul Wouters, Stefan Ubbink, and Loganaden Velvindron for
+  their reviews and comments.
 
 
 
 --- back
 
 # ChangeLog
+
+(RFC Editor: please remove this ChangeLog section upon publication.)
+
+## Changes from ietf-07 to ietf-08
+
+    * Handle issues raised during IETF last call:
+        * updates 9157
+        * other nit fixes
+    
 
 ## Changes from ietf-06 to ietf-07
 
@@ -438,7 +453,7 @@ informative:
 ## Changes from ietf-01 to ietf-02
 
    * Changed the MUST values in the tables for the Use columns to
-     RECOMMENDED based on discussions no the dnsop mailing list.
+     RECOMMENDED based on discussions on the dnsop mailing list.
 
    * Other minor wording and formatting changes
 
