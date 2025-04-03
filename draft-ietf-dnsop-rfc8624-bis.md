@@ -409,7 +409,7 @@ informative:
   participants that all helped shaped this document. We thank Paul
   Hoffman and Paul Wouters for their contributed text, and also Shumon
   Huque, Nicolai Leymann, S Moonesamy, Magnus Nyström, Peter
-  Thomassen, Paul Wouters, Stefan Ubbink, and Loganaden Velvindron for
+  Thomassen, Stefan Ubbink, and Loganaden Velvindron for
   their reviews and comments.
 
 
