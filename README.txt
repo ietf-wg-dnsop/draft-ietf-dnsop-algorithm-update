@@ -10,7 +10,7 @@ Expires: 5 October 2025                                     3 April 2025
 
 
       DNSSEC Cryptographic Algorithm Recommendation Update Process
-                    draft-ietf-dnsop-rfc8624-bis-08
+                    draft-ietf-dnsop-rfc8624-bis-09
 
 Abstract
 
@@ -94,18 +94,18 @@ Table of Contents
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .  10
      9.2.  Informative References  . . . . . . . . . . . . . . . . .  11
    Appendix A.  ChangeLog  . . . . . . . . . . . . . . . . . . . . .  12
-     A.1.  Changes from ietf-07 to ietf-08 . . . . . . . . . . . . .  12
-     A.2.  Changes from ietf-06 to ietf-07 . . . . . . . . . . . . .  13
-     A.3.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  13
-     A.4.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  13
-     A.5.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  13
-     A.6.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  13
-     A.7.  Changes from ietf-00 to ietf-01 . . . . . . . . . . . . .  13
-     A.8.  Changes from hardaker-04 to ietf-00 . . . . . . . . . . .  13
-     A.9.  Changes from -03 to -04 . . . . . . . . . . . . . . . . .  13
-     A.10. Changes since RFC8624 . . . . . . . . . . . . . . . . . .  14
+     A.1.  Changes from ietf-08 to ietf-09 . . . . . . . . . . . . .  12
+     A.2.  Changes from ietf-07 to ietf-08 . . . . . . . . . . . . .  13
+     A.3.  Changes from ietf-06 to ietf-07 . . . . . . . . . . . . .  13
+     A.4.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  13
+     A.5.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  13
+     A.6.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  13
+     A.7.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  13
+     A.8.  Changes from ietf-00 to ietf-01 . . . . . . . . . . . . .  13
+     A.9.  Changes from hardaker-04 to ietf-00 . . . . . . . . . . .  13
+     A.10. Changes from -03 to -04 . . . . . . . . . . . . . . . . .  14
+     A.11. Changes since RFC8624 . . . . . . . . . . . . . . . . . .  14
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  14
-
 
 
 
@@ -661,11 +661,11 @@ Appendix A.  ChangeLog
 
    (RFC Editor: please remove this ChangeLog section upon publication.)
 
-A.1.  Changes from ietf-07 to ietf-08
+A.1.  Changes from ietf-08 to ietf-09
 
-   * Handle issues raised during IETF last call:
-       * updates 9157
-       * other nit fixes
+   * Added missing alogirthms (SM2/SM3 and GOST R 34.10-2012)
+
+
 
 
 
@@ -674,15 +674,21 @@ Hardaker & Kumari        Expires 5 October 2025                [Page 12]
 Internet-Draft      DNSSEC Algorithms Update Process          April 2025
 
 
-A.2.  Changes from ietf-06 to ietf-07
+A.2.  Changes from ietf-07 to ietf-08
+
+   * Handle issues raised during IETF last call:
+       * updates 9157
+       * other nit fixes
+
+A.3.  Changes from ietf-06 to ietf-07
 
    * changed to a standards track document
 
-A.3.  Changes from ietf-05 to ietf-06
+A.4.  Changes from ietf-05 to ietf-06
 
    * Address Eric Vyncke (RAD!) AD review comments.
 
-A.4.  Changes from ietf-03 to ietf-05
+A.5.  Changes from ietf-03 to ietf-05
 
 * Updated "entry requirements" to be "Specification Required".
 * Marked values 128 - 252 as "Reserved" in "Digest Algorithms" as
@@ -692,32 +698,26 @@ break-glass mechanism in case we get a flood of these. To align with the
 Algorithms"
 * Deleted the (now superfluous) column "Status" from the "Digest
 
-A.5.  Changes from ietf-02 to ietf-03
+A.6.  Changes from ietf-02 to ietf-03
 
    *  Fixed the reference in the Abstract (no links in Abstracts)
 
    *  Added Updates: to the header.
 
-A.6.  Changes from ietf-01 to ietf-02
+A.7.  Changes from ietf-01 to ietf-02
 
    *  Changed the MUST values in the tables for the Use columns to
       RECOMMENDED based on discussions on the dnsop mailing list.
 
    *  Other minor wording and formatting changes
 
-A.7.  Changes from ietf-00 to ietf-01
+A.8.  Changes from ietf-00 to ietf-01
 
    *  Only NIT fixing
 
-A.8.  Changes from hardaker-04 to ietf-00
+A.9.  Changes from hardaker-04 to ietf-00
 
    *  Just a draft name and number change.
-
-A.9.  Changes from -03 to -04
-
-   *  Changed the columns being added from 2 per table to 4, based on
-      discussion within the dnsop working group mailing list.  This was
-      a fairly major set of changes.
 
 
 
@@ -730,7 +730,13 @@ Hardaker & Kumari        Expires 5 October 2025                [Page 13]
 Internet-Draft      DNSSEC Algorithms Update Process          April 2025
 
 
-A.10.  Changes since RFC8624
+A.10.  Changes from -03 to -04
+
+   *  Changed the columns being added from 2 per table to 4, based on
+      discussion within the dnsop working group mailing list.  This was
+      a fairly major set of changes.
+
+A.11.  Changes since RFC8624
 
    *  The primary purpose of this revision is to introduce the new
       columns to existing registries.  It makes no changes to the
@@ -750,12 +756,6 @@ Authors' Addresses
    Warren Kumari
    Google
    Email: warren@kumari.net
-
-
-
-
-
-
 
 
 
