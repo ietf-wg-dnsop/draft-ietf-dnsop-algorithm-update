@@ -148,14 +148,14 @@ informative:
    mentioned as mandatory to implement is expected to be first introduced
    as RECOMMENDED instead of a MUST.
 
-   Since the effect of using an unknown DNSKEY algorithm is that the zone is
-   treated as insecure, it is recommended that algorithms which have been
-   downgraded to NOT RECOMMENDED or lower not be used by authoritative
-   nameservers and DNSSEC signers to create new DNSKEY's.  This will allow for
-   deprecated algorithms to become used less and less over time.  Once an
-   algorithm has reached a sufficiently low level of deployment, it can be
-   marked as MUST NOT, so that recursive resolvers can remove support for
-   validating it.
+   Since the effect of using an unknown DNSKEY algorithm is that the
+   zone is treated as insecure, it is recommended that algorithms
+   which have been downgraded to NOT RECOMMENDED or lower not be used
+   by authoritative nameservers and DNSSEC signers to create new
+   DNSKEY's.  This ensures that the use of deprecated algorithms
+   decreases over time.  Once an algorithm has reached a sufficiently
+   low level of deployment, it can be marked as MUST NOT, so that
+   recursive resolvers can remove support for validating it.
 
    Validating recursive resolvers are encouraged to retain support for all
    algorithms not marked as MUST NOT.
@@ -237,11 +237,13 @@ informative:
 
    The following sections state the initial values to be populated
    into these rows. The "Implement for" column values are transcribed
-   from [RFC8624]. The "Use for" columns are set to the same values
-   as the "implement for" values since the general interpretation to
-   date indicates they have been treated as values for both
-   "implementation" and "use". We note that the values for "Implement
-   for" and "Use for" may diverge in the future
+   from [RFC8624]. The "Use for" columns are set to the same values as
+   the "Implement for" values since the general interpretation to date
+   indicates they have been treated as values for both
+   "implementation" and "use". Note that the "Use for"
+   columns values use "RECOMMENDED" when the corresponding "Implement
+   for" column is a "MUST" value.  We note that the values for
+   "Implement for" and "Use for" may diverge in the future.
 
 #  DNS System Algorithm Numbers Column Values
 
@@ -255,8 +257,7 @@ informative:
 
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | N  | Mnemonics           | Use for DNSSEC Signing | Use for DNSSEC Validation | Implement for DNSSEC Signing | Implement for DNSSEC Validation |
-   |----|---------------------|------------------------|---------------------------|
-------------------------------|---------------------------------|
+   |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | 1  | RSAMD5              | MUST NOT               | MUST NOT                  | MUST NOT                     | MUST NOT                        |
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | 3  | DSA                 | MUST NOT               | MUST NOT                  | MUST NOT                     | MUST NOT                        |
@@ -407,9 +408,9 @@ informative:
   of the DNSOP working group.  The authors appreciate the
   thoughtfulness of the many opinions expressed by working group
   participants that all helped shaped this document. We thank Paul
-  Hoffman and Paul Wouters for their contributed text, and also Shumon
-  Huque, Nicolai Leymann, S Moonesamy, Magnus Nyström, Peter
-  Thomassen, Stefan Ubbink, and Loganaden Velvindron for
+  Hoffman and Paul Wouters for their contributed text, and also 
+  Nabeel Cocker, Shumon Huque, Nicolai Leymann, S Moonesamy, Magnus Nyström, 
+  Peter Thomassen, Stefan Ubbink, and Loganaden Velvindron for
   their reviews and comments.
 
 
