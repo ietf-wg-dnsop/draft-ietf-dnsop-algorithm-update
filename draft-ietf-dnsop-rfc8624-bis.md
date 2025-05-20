@@ -354,11 +354,6 @@ Implement for DNSSEC Validation:
 
 #  Security Considerations
 
-   This document makes no modifications to the security of the
-   existing protocol or recommendations described in [RFC8624].  Thus,
-   the security considerations remain the same.  The remainder of this
-   section restates that document's text.
-
    The security of cryptographic systems depends on both the strength of
    the cryptographic algorithms chosen and the strength of the keys used
    with those algorithms.  The security also depends on the engineering
