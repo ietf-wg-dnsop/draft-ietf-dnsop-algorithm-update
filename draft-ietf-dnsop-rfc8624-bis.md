@@ -243,7 +243,8 @@ informative:
    "implementation" and "use". Note that the "Use for"
    columns values use "RECOMMENDED" when the corresponding "Implement
    for" column is a "MUST" value.  We note that the values for
-   "Implement for" and "Use for" may diverge in the future.
+   "Implement for" and "Use for" may diverge in the future as 
+   implementations generally precede deployments.
 
 #  DNS System Algorithm Numbers Column Values
 
@@ -356,9 +357,10 @@ informative:
    rollovers.
 
    DS algorithm rollover in a live zone is also a complex process.
-   Upgrading algorithm at the same time as rolling to the new KSK key will
-   lead to DNSSEC validation failures, and users MUST upgrade the DS
-   algorithm first before rolling to a new Key Signing Key.
+   Upgrading algorithm at the same time as rolling to the new Key
+   Signing Key (KSK) key will lead to DNSSEC validation failures, and
+   users MUST upgrade the DS algorithm first before rolling to a new
+   KSK.
 
 #  IANA Considerations
 
