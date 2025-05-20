@@ -263,9 +263,7 @@ Implement for DNSSEC Validation:
    "RECOMMENDED", "MUST", "MUST NOT", and "NOT RECOMMENDED" may be
    placed into the "Implement for DNSSEC Signing" and "Implement for
    DNSSEC Validation" columns.  Note that a value of "MUST" is not an
-   allowed value for the two "Use for" columns since mandating two 
-   algorithms for operational deployment is generally ill-advised, 
-   unlike mandating multiple algorithms for implementation.
+   allowed value for the two "Use for" columns.
 
    The following sections state the initial values to be populated
    into these rows. The "Implement for" column values are transcribed
