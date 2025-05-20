@@ -200,6 +200,28 @@ informative:
    |-----------------------------------|----------------------------------|
 {: #columns title="Columns to add to existing DNSSEC algorithm registries"}
 
+## Column Descriptions
+
+The intended usage of the four columns are:
+
+Use for DNSSEC Delegation:
+: Indicates the algorithm's recommended usage for deployment in DS
+  records by authoritative servers.
+
+Use for DNSSEC Validation:
+: Indicates the algorithm's recommended usage for validation in
+  validating resolvers.
+
+Implement for DNSSEC Delegation:
+: Indicates the recommendation for implementing the algorithm within
+  authoritative servers.
+
+Implement for DNSSEC Validation:
+: Indicates the recommendation for implementing the algorithm within
+  validating resolvers.
+
+## Adding and Changing Values 
+
    Adding a new entry to the "DNS System Algorithm Numbers" registry
    with a recommended value of "MAY" in the "Use for DNSSSEC Signing",
    "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
@@ -234,6 +256,14 @@ informative:
    mean that it is flawed; rather, it indicates that the item either
    has not been through the IETF consensus process, has limited
    applicability, or is intended only for specific use cases.
+   
+   Only values of "MAY", "RECOMMENDED", "MUST NOT", and "NOT
+   RECOMMENDED" may be placed into the "Use for DNSSEC Signing" and
+   "Use for DNSSEC Validation" columns.  Only values of "MAY",
+   "RECOMMENDED", "MUST", "MUST NOT", and "NOT RECOMMENDED" may be
+   placed into the "Implement for DNSSEC Signing" and "Implement for
+   DNSSEC Validation" columns.  Note that a value of "MUST" is not an
+   allowed value for the two "Use for" columns.
 
    The following sections state the initial values to be populated
    into these rows. The "Implement for" column values are transcribed
