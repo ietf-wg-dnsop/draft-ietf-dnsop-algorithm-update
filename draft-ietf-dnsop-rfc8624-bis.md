@@ -72,7 +72,7 @@ informative:
    incremental update RFCs.  This document also incorporates the revised 
    IANA DNSSEC considerations from RFC9157.
 
-   The document does not change the status (MUST, MAY, RECOMMENDED, etc) of any
+   The document does not change the status (MUST, MAY, RECOMMENDED, etc.) 
    of the algorithms listed in RFC8624; that is the work of future documents.
 
 --- middle
@@ -122,7 +122,7 @@ informative:
    who wishes to deploy and configure DNSSEC with only the safest
    algorithm.  As such this document also adds new recommendations
    about which algorithms should be deployed regardless of
-   implementation status. In general it is expected that deployment
+   implementation status. In general, it is expected that deployment
    of aging algorithms should generally be reduced before
    implementations stop supporting them.
 
@@ -169,7 +169,7 @@ informative:
    in BCP 14 {{RFC2119}} {{RFC8174}} when, and only when, they appear
    in all capitals, as shown here.
 
-   [RFC2119] considers the term SHOULD equivalent to RECOMMENDED, and
+   [RFC2119] considers the term SHOULD to be equivalent to RECOMMENDED, and
    SHOULD NOT equivalent to NOT RECOMMENDED.  This document has
    chosen to use the terms RECOMMENDED and NOT RECOMMENDED, as this
    more clearly expresses the recommendations to implementers.
@@ -432,9 +432,6 @@ Implement for DNSSEC Validation:
   * Mark values 128 - 252 as "Reserved"
   * Mark values 253 and 254 as "Reserved for Private Use"
   * Delete the (now superfluous) column "Status" from the registry
-
-  Additionally, the registration policy for the [DS-IANA] registry
-  should match the text describing the requirements in this document.
 
 #  Acknowledgments
 
