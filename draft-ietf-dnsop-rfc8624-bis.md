@@ -70,7 +70,7 @@ informative:
    the list of requirements to be more easily updated, and to allow the list to be more easily
    referenced. Future extensions to this registry can be made under new,
    incremental update RFCs.  This document also incorporates the revised 
-   IANA DNSSEC considerations from [RFC9157].
+   IANA DNSSEC considerations from RFC9157.
 
    The document does not change the status (MUST, MAY, RECOMMENDED, etc) of any
    of the algorithms listed in RFC8624; that is the work of future documents.
@@ -170,15 +170,14 @@ informative:
    in all capitals, as shown here.
 
    [RFC2119] considers the term SHOULD equivalent to RECOMMENDED, and
-   SHOULD NOT equivalent to NOT RECOMMENDED.  The authors of this
-   document have chosen to use the terms RECOMMENDED and NOT
-   RECOMMENDED, as this more clearly expresses the recommendations to
-   implementers.
+   SHOULD NOT equivalent to NOT RECOMMENDED.  This document has
+   chosen to use the terms RECOMMENDED and NOT RECOMMENDED, as this
+   more clearly expresses the recommendations to implementers.
 
 # Adding usage and implementation recommendations to the IANA DNSSEC registries
 
    Per this document, the following columns are being added to the
-   following DNSSEC algorithm registries registered with IANA:
+   following DNSSEC algorithm registries maintained with IANA:
 
    |-----------------------------------|----------------------------------|
    | Registry                          | Column added                     |
@@ -287,6 +286,10 @@ informative:
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
    | 23 | GOST R 34.10-2012   | MAY                    | MAY                       | MAY                          | MAY                             |
    |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
+   | 253 | private algorithm  | MAY                    | MAY                       | MAY                          | MAY                             |
+   |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
+   | 254 | private algorithm OID | MAY                    | MAY                       | MAY                          | MAY                             |
+   |----|---------------------|------------------------|---------------------------|------------------------------|---------------------------------|
 {: #algtable title="Initial values for the DNS System Algorithm Numbers columns"}
 
 #  DNSSEC Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms Column Values
@@ -302,7 +305,7 @@ informative:
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
    | Number | Mnemonics         | Use for DNSSEC Delegation | Use for DNSSEC Validation | Implement for DNSSEC Delegation | Implement for DNSSEC Validation |
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
-   | 0      | NULL (CDS only)   | MUST NOT \[*\]            | MUST NOT \[*\]            | MUST NOT \[*\]                  | MUST NOT \[*\]                  |
+   | 0      | NULL (CDS only)   | MUST NOT                  | MUST NOT                  | MUST NOT                        | MUST NOT                        |
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
    | 1      | SHA-1             | MUST NOT                  | RECOMMENDED               | MUST NOT                        | MUST                            |
    |--------|-------------------|---------------------------|---------------------------|---------------------------------|---------------------------------|
@@ -353,9 +356,9 @@ informative:
    rollovers.
 
    DS algorithm rollover in a live zone is also a complex process.
-   Upgrading algorithm at the same time as rolling the new KSK key will
+   Upgrading algorithm at the same time as rolling to the new KSK key will
    lead to DNSSEC validation failures, and users MUST upgrade the DS
-   algorithm first before rolling the Key Signing Key.
+   algorithm first before rolling to a new Key Signing Key.
 
 #  IANA Considerations
 
