@@ -11,7 +11,7 @@ Expires: 21 November 2025
 
 
       DNSSEC Cryptographic Algorithm Recommendation Update Process
-                    draft-ietf-dnsop-rfc8624-bis-09
+                    draft-ietf-dnsop-rfc8624-bis-10
 
 Abstract
 
@@ -96,16 +96,16 @@ Table of Contents
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .  11
      9.2.  Informative References  . . . . . . . . . . . . . . . . .  12
    Appendix A.  ChangeLog  . . . . . . . . . . . . . . . . . . . . .  13
-     A.1.  Changes from ietf-08 to ietf-09 . . . . . . . . . . . . .  13
-     A.2.  Changes from ietf-07 to ietf-08 . . . . . . . . . . . . .  14
-     A.3.  Changes from ietf-06 to ietf-07 . . . . . . . . . . . . .  14
-     A.4.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  14
-     A.5.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  14
-     A.6.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  14
-     A.7.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  14
-     A.8.  Changes from ietf-00 to ietf-01 . . . . . . . . . . . . .  14
-     A.9.  Changes from hardaker-04 to ietf-00 . . . . . . . . . . .  14
-     A.10. Changes from -03 to -04 . . . . . . . . . . . . . . . . .  14
+     A.1.  Changes from ietf-09 to ietf-10:  . . . . . . . . . . . .  13
+     A.2.  Changes from ietf-08 to ietf-09 . . . . . . . . . . . . .  13
+     A.3.  Changes from ietf-07 to ietf-08 . . . . . . . . . . . . .  13
+     A.4.  Changes from ietf-06 to ietf-07 . . . . . . . . . . . . .  14
+     A.5.  Changes from ietf-05 to ietf-06 . . . . . . . . . . . . .  14
+     A.6.  Changes from ietf-03 to ietf-05 . . . . . . . . . . . . .  14
+     A.7.  Changes from ietf-02 to ietf-03 . . . . . . . . . . . . .  14
+     A.8.  Changes from ietf-01 to ietf-02 . . . . . . . . . . . . .  14
+     A.9.  Changes from ietf-00 to ietf-01 . . . . . . . . . . . . .  14
+     A.10. Changes from hardaker-04 to ietf-00 . . . . . . . . . . .  14
 
 
 
@@ -114,7 +114,8 @@ Hardaker & Kumari       Expires 21 November 2025                [Page 2]
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
-     A.11. Changes since RFC8624 . . . . . . . . . . . . . . . . . .  15
+     A.11. Changes from -03 to -04 . . . . . . . . . . . . . . . . .  14
+     A.12. Changes since RFC8624 . . . . . . . . . . . . . . . . . .  15
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  15
 
 1.  Introduction
@@ -159,7 +160,6 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
    Implementations need to be conservative in the selection of
    algorithms they implement in order to minimize both code complexity
    and the attack surface.
-
 
 
 
@@ -488,16 +488,16 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 5.  Security Considerations
 
-   This document makes no modifications to the security of the existing
-   protocol or recommendations described in [RFC8624].  Thus, the
-   security considerations remain the same.  The remainder of this
-   section restates that document's text.
-
    The security of cryptographic systems depends on both the strength of
    the cryptographic algorithms chosen and the strength of the keys used
    with those algorithms.  The security also depends on the engineering
    of the protocol used by the system to ensure that there are no non-
    cryptographic ways to bypass the security of the overall system.
+
+   This document concerns itself with the selection of cryptographic
+   algorithms for the use of DNSSEC, specifically with the selection of
+   "mandatory to implement" algorithms.  The algorithms identified in
+   this document as "MUST" or "RECOMMENDED" to implement are not known
 
 
 
@@ -506,10 +506,6 @@ Hardaker & Kumari       Expires 21 November 2025                [Page 9]
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
-   This document concerns itself with the selection of cryptographic
-   algorithms for the use of DNSSEC, specifically with the selection of
-   "mandatory to implement" algorithms.  The algorithms identified in
-   this document as "MUST" or "RECOMMENDED" to implement are not known
    to be broken at the current time, and cryptographic research so far
    leads us to believe that they are likely to remain adequately secure
    unless significant and unexpected discovery is made.  However, this
@@ -553,7 +549,11 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
    *  "Implement for DNSSEC Validation"
 
+   These values must be populated using values from Table 2 of this
+   document.
 
+   Additionally, the registration policy for the [DNSKEY-IANA] registry
+   should match the text describing the requirements in this document.
 
 
 
@@ -561,12 +561,6 @@ Hardaker & Kumari       Expires 21 November 2025               [Page 10]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
-
-   These values must be populated using values from Table 2 of this
-   document.
-
-   Additionally, the registration policy for the [DNSKEY-IANA] registry
-   should match the text describing the requirements in this document.
 
 7.2.  Update to the "Digest Algorithms" registry
 
@@ -611,17 +605,18 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 9.1.  Normative References
 
+   [DNSKEY-IANA]
+              IANA, "DNS Security Algorithm Numbers", n.d.,
+              <https://www.iana.org/assignments/dns-sec-alg-numbers/dns-
+              sec-alg-numbers.xml#dns-sec-alg-numbers-1>.
+
+
 
 
 Hardaker & Kumari       Expires 21 November 2025               [Page 11]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
-
-   [DNSKEY-IANA]
-              IANA, "DNS Security Algorithm Numbers", n.d.,
-              <https://www.iana.org/assignments/dns-sec-alg-numbers/dns-
-              sec-alg-numbers.xml#dns-sec-alg-numbers-1>.
 
    [DS-IANA]  IANA, "Delegation Signer (DS) Resource Record (RR) Type
               Digest Algorithms", n.d.,
@@ -667,17 +662,17 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
               Existence", RFC 5155, DOI 10.17487/RFC5155, March 2008,
               <https://www.rfc-editor.org/rfc/rfc5155>.
 
+   [RFC5702]  Jansen, J., "Use of SHA-2 Algorithms with RSA in DNSKEY
+              and RRSIG Resource Records for DNSSEC", RFC 5702,
+              DOI 10.17487/RFC5702, October 2009,
+              <https://www.rfc-editor.org/rfc/rfc5702>.
+
 
 
 Hardaker & Kumari       Expires 21 November 2025               [Page 12]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
-
-   [RFC5702]  Jansen, J., "Use of SHA-2 Algorithms with RSA in DNSKEY
-              and RRSIG Resource Records for DNSSEC", RFC 5702,
-              DOI 10.17487/RFC5702, October 2009,
-              <https://www.rfc-editor.org/rfc/rfc5702>.
 
    [RFC5933]  Dolmatov, V., Ed., Chuprina, A., and I. Ustinov, "Use of
               GOST Signature Algorithms in DNSKEY and RRSIG Resource
@@ -717,10 +712,15 @@ Appendix A.  ChangeLog
 
    (RFC Editor: please remove this ChangeLog section upon publication.)
 
-A.1.  Changes from ietf-08 to ietf-09
+A.1.  Changes from ietf-09 to ietf-10:
+
+   * Many comments addressed from IESG reviews
+
+A.2.  Changes from ietf-08 to ietf-09
 
    * Added missing alogirthms (SM2/SM3 and GOST R 34.10-2012)
 
+A.3.  Changes from ietf-07 to ietf-08
 
 
 
@@ -730,21 +730,19 @@ Hardaker & Kumari       Expires 21 November 2025               [Page 13]
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
-A.2.  Changes from ietf-07 to ietf-08
-
    * Handle issues raised during IETF last call:
        * updates 9157
        * other nit fixes
 
-A.3.  Changes from ietf-06 to ietf-07
+A.4.  Changes from ietf-06 to ietf-07
 
    * changed to a standards track document
 
-A.4.  Changes from ietf-05 to ietf-06
+A.5.  Changes from ietf-05 to ietf-06
 
    * Address Eric Vyncke (RAD!) AD review comments.
 
-A.5.  Changes from ietf-03 to ietf-05
+A.6.  Changes from ietf-03 to ietf-05
 
 * Updated "entry requirements" to be "Specification Required".
 * Marked values 128 - 252 as "Reserved" in "Digest Algorithms" as
@@ -754,30 +752,32 @@ break-glass mechanism in case we get a flood of these. To align with the
 Algorithms"
 * Deleted the (now superfluous) column "Status" from the "Digest
 
-A.6.  Changes from ietf-02 to ietf-03
+A.7.  Changes from ietf-02 to ietf-03
 
    *  Fixed the reference in the Abstract (no links in Abstracts)
 
    *  Added Updates: to the header.
 
-A.7.  Changes from ietf-01 to ietf-02
+A.8.  Changes from ietf-01 to ietf-02
 
    *  Changed the MUST values in the tables for the Use columns to
       RECOMMENDED based on discussions on the dnsop mailing list.
 
    *  Other minor wording and formatting changes
 
-A.8.  Changes from ietf-00 to ietf-01
+A.9.  Changes from ietf-00 to ietf-01
 
    *  Only NIT fixing
 
-A.9.  Changes from hardaker-04 to ietf-00
+A.10.  Changes from hardaker-04 to ietf-00
 
    *  Just a draft name and number change.
 
-A.10.  Changes from -03 to -04
+A.11.  Changes from -03 to -04
 
-
+   *  Changed the columns being added from 2 per table to 4, based on
+      discussion within the dnsop working group mailing list.  This was
+      a fairly major set of changes.
 
 
 
@@ -786,11 +786,7 @@ Hardaker & Kumari       Expires 21 November 2025               [Page 14]
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
-   *  Changed the columns being added from 2 per table to 4, based on
-      discussion within the dnsop working group mailing list.  This was
-      a fairly major set of changes.
-
-A.11.  Changes since RFC8624
+A.12.  Changes since RFC8624
 
    *  The primary purpose of this revision is to introduce the new
       columns to existing registries.  It makes no changes to the
@@ -812,6 +808,10 @@ Authors' Addresses
    Google
 
    Email: warren@kumari.net
+
+
+
+
 
 
 
