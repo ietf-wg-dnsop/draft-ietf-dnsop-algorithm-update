@@ -66,7 +66,7 @@ informative:
    implementations support.  This document updates RFC8624 by moving the
    canonical source of algorithm implementation requirements and usage guidance
    for DNSSEC from RFC8624 to an IANA registry. This is done both to allow
-   the list to be more easily updated, and to allow the list to be more easily
+   the list of requirements to be more easily updated, and to allow the list to be more easily
    referenced. Future extensions to this registry can be made under new,
    incremental update RFCs.  This document also incorporates the revised 
    IANA DNSSEC considerations from [RFC9157].
@@ -103,7 +103,7 @@ informative:
    Algorithms"][DS-IANA] registries target DNSSEC operators and implementers.
 
    Implementations need to meet both high security expectations as
-   well as provide interoperability between various vendors and with
+   well as provide interoperability between various implementations and with
    different versions.
 
    The field of cryptography evolves continuously.  New, stronger algorithms
@@ -321,7 +321,8 @@ informative:
 
    This document makes no modifications to the security of the
    existing protocol or recommendations described in [RFC8624].  Thus,
-   the security considerations remain the same, which we quote below.
+   the security considerations remain the same.  The remainder of this
+   section restates that document's text.
 
    The security of cryptographic systems depends on both the strength of
    the cryptographic algorithms chosen and the strength of the keys used
