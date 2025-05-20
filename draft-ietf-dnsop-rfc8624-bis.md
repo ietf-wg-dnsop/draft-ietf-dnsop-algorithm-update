@@ -5,7 +5,8 @@ docname: draft-ietf-dnsop-rfc8624-bis-09
 category: std
 ipr: trust200902
 stream: IETF
-updates: 8624, 9157
+updates: 9157
+obsoletes: 8624
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, docmapping]
