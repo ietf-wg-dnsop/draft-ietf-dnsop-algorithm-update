@@ -64,7 +64,7 @@ informative:
    interoperability between DNS resolvers and DNS authoritative servers, it is
    necessary to specify both a set of algorithm implementation requirements and
    usage guidelines to ensure that there is at least one algorithm that all
-   implementations support.  This document updates RFC8624 by moving the
+   implementations support.  This document replaces and obsoletes RFC8624 and moves the
    canonical source of algorithm implementation requirements and usage guidance
    for DNSSEC from RFC8624 to an IANA registry. This is done both to allow
    the list of requirements to be more easily updated, and to allow the list to be more easily
