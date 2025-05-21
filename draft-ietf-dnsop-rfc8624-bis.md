@@ -204,13 +204,14 @@ informative:
 
 The intended usage of the four columns are:
 
-Use for DNSSEC Delegation:
-: Indicates the algorithm's recommended usage for deployment in DS
-  records by authoritative servers.
-
 Use for DNSSEC Validation:
-: Indicates the algorithm's recommended usage for validation in
-  validating resolvers.
+: Indicates the recommendation for using the algorithm in DNSSEC
+  validators.
+
+Implement for DNSSEC Validation:
+: Indicates the recommendation for implementing the algorithm within
+  DNSSEC validators.
+
 
 Implement for DNSSEC Delegation:
 : Indicates the recommendation for implementing the algorithm within
@@ -219,6 +220,8 @@ Implement for DNSSEC Delegation:
 Implement for DNSSEC Validation:
 : Indicates the recommendation for implementing the algorithm within
   validating resolvers.
+
+
 
 ## Adding and Changing Values 
 
