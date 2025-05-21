@@ -6,8 +6,8 @@ Network Working Group                                        W. Hardaker
 Internet-Draft                                                   USC/ISI
 Obsoletes: 8624 (if approved)                                  W. Kumari
 Updates: 9157 (if approved)                                       Google
-Intended status: Standards Track                             20 May 2025
-Expires: 21 November 2025
+Intended status: Standards Track                             21 May 2025
+Expires: 22 November 2025
 
 
       DNSSEC Cryptographic Algorithm Recommendation Update Process
@@ -48,12 +48,12 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 November 2025.
+   This Internet-Draft will expire on 22 November 2025.
 
 
 
 
-Hardaker & Kumari       Expires 21 November 2025                [Page 1]
+Hardaker & Kumari       Expires 22 November 2025                [Page 1]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Hardaker & Kumari       Expires 21 November 2025                [Page 2]
+Hardaker & Kumari       Expires 22 November 2025                [Page 2]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -165,7 +165,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025                [Page 3]
+Hardaker & Kumari       Expires 22 November 2025                [Page 3]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -221,7 +221,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025                [Page 4]
+Hardaker & Kumari       Expires 22 November 2025                [Page 4]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -245,48 +245,60 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
    Per this document, the following columns are being added to the
    following DNSSEC algorithm registries maintained with IANA:
 
-   +================================+==================================+
-   | Registry                       | Column added                     |
-   +================================+==================================+
-   | DNS Security Algorithm Numbers | Use for DNSSSEC Signing          |
-   +--------------------------------+----------------------------------+
-   | DNS Security Algorithm Numbers | Use for DNSSSEC Validation       |
-   +--------------------------------+----------------------------------+
-   | DNS Security Algorithm Numbers | Implement for DNSSSEC Signing    |
-   +--------------------------------+----------------------------------+
-   | DNS Security Algorithm Numbers | Implement for DNSSSEC            |
-   |                                | Validation                       |
-   +--------------------------------+----------------------------------+
-   | Digest Algorithm               | Use for DNSSSEC Delegation       |
-   +--------------------------------+----------------------------------+
-   | Digest Algorithm               | Use for DNSSSEC Validation       |
-   +--------------------------------+----------------------------------+
-   | Digest Algorithm               | Implement for DNSSSEC            |
-   |                                | Delegation                       |
-   +--------------------------------+----------------------------------+
-   | Digest Algorithm               | Implement for DNSSSEC            |
-   |                                | Validation                       |
-   +--------------------------------+----------------------------------+
+   +================================+=================================+
+   | Registry                       | Column added                    |
+   +================================+=================================+
+   | DNS Security Algorithm Numbers | Use for DNSSEC Signing          |
+   +--------------------------------+---------------------------------+
+   | DNS Security Algorithm Numbers | Use for DNSSEC Validation       |
+   +--------------------------------+---------------------------------+
+   | DNS Security Algorithm Numbers | Implement for DNSSEC Signing    |
+   +--------------------------------+---------------------------------+
+   | DNS Security Algorithm Numbers | Implement for DNSSEC Validation |
+   +--------------------------------+---------------------------------+
+   | Digest Algorithm               | Use for DNSSEC Delegation       |
+   +--------------------------------+---------------------------------+
+   | Digest Algorithm               | Use for DNSSEC Validation       |
+   +--------------------------------+---------------------------------+
+   | Digest Algorithm               | Implement for DNSSEC Delegation |
+   +--------------------------------+---------------------------------+
+   | Digest Algorithm               | Implement for DNSSEC Validation |
+   +--------------------------------+---------------------------------+
 
-      Table 1: Columns to add to existing DNSSEC algorithm registries
+     Table 1: Columns to add to existing DNSSEC algorithm registries
 
 2.1.  Column Descriptions
 
-   The intended usage of the four columns are:
+   The intended usage of the four columns in the "DNS Security Algorithm
+   Numbers" table are:
+
+   Use for DNSSEC Signing:  Indicates the recommendation for using the
+      algorithm within authoritative servers.
 
 
 
-
-Hardaker & Kumari       Expires 21 November 2025                [Page 5]
+Hardaker & Kumari       Expires 22 November 2025                [Page 5]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
-   Use for DNSSEC Delegation:  Indicates the algorithm's recommended
-      usage for deployment in DS records by authoritative servers.
+   Use for DNSSEC Validation:  Indicates the recommendation for using
+      the algorithm in DNSSEC validators.
 
-   Use for DNSSEC Validation:  Indicates the algorithm's recommended
-      usage for validation in validating resolvers.
+   Implement for DNSSEC Signing:  Indicates the recommendation for
+      implementing the algorithm within DNSSEC signing software.
+
+   Implement for DNSSEC Validation:  Indicates the recommendation for
+      implementing the algorithm within DNSSEC validators.
+
+   The intended usage of the four columns in the "Digest Algorithm"
+   table are:
+
+   Use for DNSSEC Delegation:  Indicates the recommendation for using
+      the algorithm within authoritative servers.
+
+   Use for DNSSEC Validation:  Indicates the recommendation for using
+      the algorithm in DNSSEC validators.
 
    Implement for DNSSEC Delegation:  Indicates the recommendation for
       implementing the algorithm within authoritative servers.
@@ -297,9 +309,9 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 2.2.  Adding and Changing Values
 
    Adding a new entry to the "DNS System Algorithm Numbers" registry
-   with a recommended value of "MAY" in the "Use for DNSSSEC Signing",
-   "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
-   "Implement for DNSSSEC Validation" columns SHALL follow the
+   with a recommended value of "MAY" in the "Use for DNSSEC Signing",
+   "Use for DNSSEC Validation", "Implement for DNSSEC Signing", or
+   "Implement for DNSSEC Validation" columns SHALL follow the
    "Specification Required" policy as defined in [RFC8126] in order to
    promote continued evolution of DNSSEC algorithms and DNSSEC agility.
    New entries added through the "Specification Required" process will
@@ -309,34 +321,39 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
    designated expert to review the request.)
 
    Adding a new entry to, or changing existing values in, the "DNS
-   System Algorithm Numbers" registry for the "Use for DNSSSEC Signing",
-   "Use for DNSSSEC Validation", "Implement for DNSSSEC Signing", or
-   "Implement for DNSSSEC Validation" columns to any other value than
+   System Algorithm Numbers" registry for the "Use for DNSSEC Signing",
+   "Use for DNSSEC Validation", "Implement for DNSSEC Signing", or
+   "Implement for DNSSEC Validation" columns to any other value than
    "MAY" requires a Standards Action.
 
+
+
+
+
+
+
+
+Hardaker & Kumari       Expires 22 November 2025                [Page 6]
+
+Internet-Draft      DNSSEC Algorithms Update Process            May 2025
+
+
    Adding a new entry to the "Digest Algorithms" registry with a
-   recommended value of "MAY" in the "Use for DNSSSEC Delegation", "Use
-   for DNSSSEC Validation", "Implement for DNSSSEC Delegation", or
-   "Implement for DNSSSEC Validation" columns SHALL follow the
+   recommended value of "MAY" in the "Use for DNSSEC Delegation", "Use
+   for DNSSEC Validation", "Implement for DNSSEC Delegation", or
+   "Implement for DNSSEC Validation" columns SHALL follow the
    "Specification Required" policy as defined in [RFC8126].
 
    Adding a new entry to, or changing existing values in, the "DNS
-   System Algorithm Numbers" registry for the "Use for DNSSSEC
-   Delegation", "Use for DNSSSEC Validation", "Implement for DNSSSEC
-   Delegation", or "Implement for DNSSSEC Validation" columns to any
+   System Algorithm Numbers" registry for the "Use for DNSSEC
+   Delegation", "Use for DNSSEC Validation", "Implement for DNSSEC
+   Delegation", or "Implement for DNSSEC Validation" columns to any
    other value than "MAY" requires a Standards Action.
 
    If an item is not marked as "RECOMMENDED", it does not necessarily
    mean that it is flawed; rather, it indicates that the item either has
    not been through the IETF consensus process, has limited
    applicability, or is intended only for specific use cases.
-
-
-
-Hardaker & Kumari       Expires 21 November 2025                [Page 6]
-
-Internet-Draft      DNSSEC Algorithms Update Process            May 2025
-
 
    Only values of "MAY", "RECOMMENDED", "MUST NOT", and "NOT
    RECOMMENDED" may be placed into the "Use for DNSSEC Signing" and "Use
@@ -372,24 +389,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hardaker & Kumari       Expires 21 November 2025                [Page 7]
+Hardaker & Kumari       Expires 22 November 2025                [Page 7]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -445,7 +445,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025                [Page 8]
+Hardaker & Kumari       Expires 22 November 2025                [Page 8]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -501,7 +501,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025                [Page 9]
+Hardaker & Kumari       Expires 22 November 2025                [Page 9]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -557,7 +557,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025               [Page 10]
+Hardaker & Kumari       Expires 22 November 2025               [Page 10]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -613,7 +613,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025               [Page 11]
+Hardaker & Kumari       Expires 22 November 2025               [Page 11]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -669,7 +669,7 @@ Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
 
 
-Hardaker & Kumari       Expires 21 November 2025               [Page 12]
+Hardaker & Kumari       Expires 22 November 2025               [Page 12]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -725,7 +725,7 @@ A.3.  Changes from ietf-07 to ietf-08
 
 
 
-Hardaker & Kumari       Expires 21 November 2025               [Page 13]
+Hardaker & Kumari       Expires 22 November 2025               [Page 13]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -781,7 +781,7 @@ A.11.  Changes from -03 to -04
 
 
 
-Hardaker & Kumari       Expires 21 November 2025               [Page 14]
+Hardaker & Kumari       Expires 22 November 2025               [Page 14]
 
 Internet-Draft      DNSSEC Algorithms Update Process            May 2025
 
@@ -837,4 +837,4 @@ Authors' Addresses
 
 
 
-Hardaker & Kumari       Expires 21 November 2025               [Page 15]
+Hardaker & Kumari       Expires 22 November 2025               [Page 15]

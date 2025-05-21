@@ -202,16 +202,35 @@ informative:
 
 ## Column Descriptions
 
-The intended usage of the four columns are:
+The intended usage of the four columns in the "DNS Security Algorithm
+Numbers" table are:
+
+Use for DNSSEC Signing:
+: Indicates the recommendation for using the algorithm within
+  authoritative servers.
 
 Use for DNSSEC Validation:
 : Indicates the recommendation for using the algorithm in DNSSEC
   validators.
 
+Implement for DNSSEC Signing:
+: Indicates the recommendation for implementing the algorithm within
+  DNSSEC signing software.
+
 Implement for DNSSEC Validation:
 : Indicates the recommendation for implementing the algorithm within
   DNSSEC validators.
 
+
+The intended usage of the four columns in the "Digest Algorithm" table are:
+
+Use for DNSSEC Delegation:
+: Indicates the recommendation for using the algorithm within
+  authoritative servers.
+
+Use for DNSSEC Validation:
+: Indicates the recommendation for using the algorithm in DNSSEC
+  validators.
 
 Implement for DNSSEC Delegation:
 : Indicates the recommendation for implementing the algorithm within
@@ -220,6 +239,7 @@ Implement for DNSSEC Delegation:
 Implement for DNSSEC Validation:
 : Indicates the recommendation for implementing the algorithm within
   validating resolvers.
+
 
 
 
