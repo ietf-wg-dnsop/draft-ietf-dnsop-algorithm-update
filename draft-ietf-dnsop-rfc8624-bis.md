@@ -1,7 +1,7 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-10
+docname: draft-ietf-dnsop-rfc8624-bis-11
 category: std
 ipr: trust200902
 stream: IETF
@@ -477,6 +477,10 @@ Implement for DNSSEC Validation:
 # ChangeLog
 
 (RFC Editor: please remove this ChangeLog section upon publication.)
+
+## Changes from ietf-10 to ietf-11:
+
+    * Many more comments to address IESG reviews
 
 ## Changes from ietf-09 to ietf-10:
 
