@@ -430,7 +430,9 @@ Implement for DNSSEC Validation:
   document.
 
   Additionally, the registration policy for the [DNSKEY-IANA] registry
-  should match the text describing the requirements in this document.
+  should match the text describing the requirements in this document,
+  and Section 2's note concerning values not marked as "RECOMMENDED"
+  should be added to the registry.
 
 ## Update to the "Digest Algorithms" registry
 
@@ -446,10 +448,13 @@ Implement for DNSSEC Validation:
   document.
 
   * Update the registration policy for the [DS-IANA] registry to
-    match the text describing update requirements above.
+    match the text describing update requirements above
   * Mark values 128 - 252 as "Reserved"
   * Mark values 253 and 254 as "Reserved for Private Use"
   * Delete the (now superfluous) column "Status" from the registry
+
+  Section 2's note concerning values not marked as "RECOMMENDED"
+  should be added to the registry.
 
 #  Acknowledgments
 
