@@ -248,7 +248,7 @@ Implement for DNSSEC Validation:
    Adding a new entry to the "DNS System Algorithm Numbers" registry
    with a recommended value of "MAY" in the "Use for DNSSEC Signing",
    "Use for DNSSEC Validation", "Implement for DNSSEC Signing", or
-   "Implement for DNSSEC Validation" columns SHALL follow the
+   "Implement for DNSSEC Validation" columns will subject to the
    "Specification Required" policy as defined in [RFC8126] in order to
    promote continued evolution of DNSSEC algorithms and DNSSEC
    agility.  New entries added through the "Specification Required"
