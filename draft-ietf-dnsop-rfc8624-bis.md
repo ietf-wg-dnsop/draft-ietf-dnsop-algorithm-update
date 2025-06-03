@@ -1,7 +1,7 @@
 ---
 title: "DNSSEC Cryptographic Algorithm Recommendation Update Process"
 abbrev: "DNSSEC Algorithms Update Process"
-docname: draft-ietf-dnsop-rfc8624-bis-11
+docname: draft-ietf-dnsop-rfc8624-bis-12
 category: std
 ipr: trust200902
 stream: IETF
