@@ -27,7 +27,6 @@ normative:
   RFC2119:
   RFC8126:
   RFC8174:
-  RFC8624:
   RFC9157:
   DNSKEY-IANA:
     author:
@@ -50,6 +49,7 @@ informative:
   RFC6781:
   RFC7583:
   RFC8080:
+  RFC8624:
   RFC9364:
   TLS-ciphersuites:
     author:
