@@ -433,6 +433,9 @@ Implement for DNSSEC Validation:
   should match the text describing the requirements in this document,
   and Section 2's note concerning values not marked as "RECOMMENDED"
   should be added to the registry.
+  
+  This document should be listed as a reference to the "DNS Security
+  Algorithm Numbers" registry.
 
 ## Update to the "Digest Algorithms" registry
 
@@ -455,6 +458,8 @@ Implement for DNSSEC Validation:
 
   Section 2's note concerning values not marked as "RECOMMENDED"
   should be added to the registry.
+
+  This document should be listed as a reference to the "Digest Algorithms" registry.
 
 #  Acknowledgments
 
